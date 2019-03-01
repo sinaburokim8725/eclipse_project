@@ -129,7 +129,8 @@ public class ClientLogin extends JFrame implements ActionListener {
 		
 	}
 	private void callChatClient(Socket resSocket) {
-		new Client(resSocket);
+		String id = fldUserID.getText().trim();
+		new Client(resSocket,id);
 	}
 	
 	private Socket clientSocket(String ip , int port) {

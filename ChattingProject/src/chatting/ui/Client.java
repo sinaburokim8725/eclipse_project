@@ -65,7 +65,8 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 	private String selectedPerson;
 	//선택된 채팅방
 	private String selectedJoinRoom;
-	
+	//사용자 id
+	String id;
 	
 	//소켓프로그램
 	private Socket 				resSocket;//서버연결소켓
@@ -81,8 +82,9 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 		
 	}
 	
-	public Client(Socket resSocket) {
+	public Client(Socket resSocket,String id) {
 		this.resSocket = resSocket;
+		this.id = id;
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -96,37 +98,61 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 			}
 		});
 	}
-	private void connection() {
-		if(resSocket != null) {
-			try {
-				sendMessage("클라이언트에서 접속했습니다.");
-				reciveMessage();
-				
-				
-			} catch (IOException e) {
-			
-				e.printStackTrace();
-			}
-			
-		}
-	}
+	
+	
 	//송신 메시지 
-	private void sendMessage(String str) throws IOException{
-		//서버에 메시지 송신할 상태 만듬
-		os = resSocket.getOutputStream();
-		dos= new DataOutputStream(os);
+	private void sendMessage(String str){
 		
-		dos.writeUTF(str);
+		try {
+			//서버에 메시지 송신할 상태 만듬
+			os = resSocket.getOutputStream();
+			dos= new DataOutputStream(os);
+			
+			dos.writeUTF(str);
+			
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+		
 	}
 	//수신 메시지
-	private void reciveMessage() throws IOException{
-		//서버메시지 수신할 상태 만듬
-		is = resSocket.getInputStream();
-		dis= new DataInputStream(is);
+	private void reciveMessage() {
 		
-		String msg = "";
-		msg = dis.readUTF();
-		areTalkPart.append(msg + "\n");
+		try {
+			//서버메시지 수신할 상태 만듬
+			is = resSocket.getInputStream();
+			dis= new DataInputStream(is);
+			
+			String msg = "";
+			msg = dis.readUTF();
+			areTalkPart.append("관리자  > " + msg + "\n");
+			
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+		
+	}
+	
+	private void connection() {
+		if(resSocket != null) {
+			
+			//최초 접속시 id 전송
+			sendMessage(id);
+			
+			Thread th = new Thread(new Runnable() {
+				
+				@Override
+				public void run() {
+					//서버메시지 수신 대기(언제올지 모르니 무한대기한다.
+					while (true) {
+						reciveMessage();
+						
+					}
+				}
+			});//th
+		}//if
 	}
 	
  	private void init() {
@@ -257,12 +283,8 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 			//서버전송
 			String message = fldMessage.getText();
 			System.out.println(message);
-			try {
-				sendMessage(message);
-			} catch (IOException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
+			
+			sendMessage(message);
 			
 			
 			//수신메시지 메시지창 출력
