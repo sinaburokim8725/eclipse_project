@@ -1,0 +1,108 @@
+package chatting.ui;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class ClientLogin extends JFrame implements ActionListener {
+
+	private JPanel contentPane;
+	private JTextField fldServerIP;
+	private JTextField fldServerPort;
+	private JTextField fldUserID;
+	private JButton btnServerConnect;
+	
+
+	/**
+	 * Create the frame.
+	 */
+	public ClientLogin() {
+		init();
+		start();
+	}
+	
+	private void init() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 381, 514);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Server IP");
+		lblNewLabel.setFont(new Font("Consolas", Font.BOLD, 12));
+		lblNewLabel.setBounds(52, 224, 86, 25);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblServerPort = new JLabel("Server Port ");
+		lblServerPort.setFont(new Font("Consolas", Font.BOLD, 12));
+		lblServerPort.setBounds(52, 292, 105, 25);
+		contentPane.add(lblServerPort);
+		
+		JLabel lblId = new JLabel("ID");
+		lblId.setFont(new Font("Consolas", Font.BOLD, 12));
+		lblId.setBounds(52, 357, 105, 25);
+		contentPane.add(lblId);
+		
+		fldServerIP = new JTextField();
+		fldServerIP.setBounds(139, 224, 173, 21);
+		contentPane.add(fldServerIP);
+		fldServerIP.setColumns(10);
+		
+		fldServerPort = new JTextField();
+		fldServerPort.setColumns(10);
+		fldServerPort.setBounds(139, 292, 173, 21);
+		contentPane.add(fldServerPort);
+		
+		fldUserID = new JTextField();
+		fldUserID.setColumns(10);
+		fldUserID.setBounds(139, 357, 173, 21);
+		contentPane.add(fldUserID);
+		
+		btnServerConnect = new JButton("접    속");
+		btnServerConnect.setFont(new Font("Malgun Gothic", Font.BOLD, 12));
+		btnServerConnect.setBounds(52, 407, 260, 30);
+		contentPane.add(btnServerConnect);
+		this.setVisible(true);
+	}
+	
+	private void start() {
+		
+	}
+	
+	
+	
+	//=======================
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					new Client();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,145 @@
+package chatting.ui;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JList;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import java.awt.Color;
+
+public class Client extends JFrame implements ActionListener{
+
+	private JPanel contentPane;
+	private JTextField textField;
+	//대화영역
+	JTextArea araTalkPart;
+	//전송
+	JButton btnSend;
+	
+	//쪽 지 보 내 기
+	JButton btnNewButton;
+	//채  팅  방  목  록
+	JList list_1;
+	//전  체  접  속  자 
+	JList list;
+	//방  만  들  기
+	JButton button_1;
+	//채  팅  방  참  여
+	JButton button;
+	
+	
+			
+	
+
+	/**
+	 * Create the frame.
+	 */
+	public Client() {
+		
+		init();
+		start();
+		
+	}
+	
+	private void init() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 702, 639);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("전  체  접  속  자");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		lblNewLabel.setBounds(12, 10, 145, 25);
+		contentPane.add(lblNewLabel);
+		
+		list = new JList();
+		list.setBounds(12, 33, 160, 194);
+		contentPane.add(list);
+		
+		btnNewButton = new JButton("쪽 지 보 내 기");
+		btnNewButton.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		btnNewButton.setBounds(12, 237, 160, 35);
+		contentPane.add(btnNewButton);
+		
+		JLabel label = new JLabel("채  팅  방  목  록");
+		label.setHorizontalAlignment(SwingConstants.LEFT);
+		label.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		label.setBounds(12, 282, 145, 25);
+		contentPane.add(label);
+		
+		list_1 = new JList();
+		list_1.setBounds(12, 304, 160, 194);
+		contentPane.add(list_1);
+		
+		
+		button = new JButton("채  팅  방  참  여");
+		button.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		button.setBounds(12, 508, 160, 35);
+		contentPane.add(button);
+		
+		button_1 = new JButton("방  만  들  기");
+		button_1.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		button_1.setBounds(12, 553, 160, 36);
+		contentPane.add(button_1);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(184, 30, 491, 514);
+		contentPane.add(scrollPane);
+		
+		araTalkPart = new JTextArea();
+		scrollPane.setViewportView(araTalkPart);
+		
+		textField = new JTextField();
+		textField.setBackground(new Color(255, 255, 153));
+		textField.setBounds(184, 554, 358, 35);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		btnSend = new JButton("전송");
+		btnSend.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		btnSend.setBounds(554, 553, 121, 36);
+		contentPane.add(btnSend);
+		this.setVisible(true);
+	}
+	
+	private void start() {
+		
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		
+		
+	}
+	//====================================================
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					new Client();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+}

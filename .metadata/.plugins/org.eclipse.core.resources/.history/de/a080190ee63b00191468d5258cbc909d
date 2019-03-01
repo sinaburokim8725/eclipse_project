@@ -1,0 +1,220 @@
+package chatting.ui;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JList;
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import java.awt.Color;
+//ListSelectionListener
+public class Client extends JFrame implements ActionListener{
+	
+	private JPanel contentPane;
+	//전송메세지
+	private JTextField fldMessage;
+	
+	//대화영역
+	JTextArea areTalkPart;
+	
+	//전  체  접  속  자
+	JList lstAllContactPerson;
+	
+	//채  팅  방  목  록 JList : lst
+	JList lstChatRoomList;
+		
+	//전송
+	JButton btnDataSend;
+		
+	//방  만  들  기
+	JButton btnRoomCreate;
+	
+	//채  팅  방  참  여 Participation <파티서 페이션
+	JButton btnGoChatRoom;
+	
+	//쪽 지 보 내 기
+	JButton btnMemoSend;
+	private JScrollPane scrollPane_1;
+	private JScrollPane scrollPane_2;
+	 
+	public Client() {
+		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					init();
+					start();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+
+		
+	}
+		
+	private void init() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 702, 639);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("전  체  접  속  자");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		lblNewLabel.setBounds(12, 10, 145, 25);
+		contentPane.add(lblNewLabel);
+		
+		scrollPane_1 = new JScrollPane();
+		scrollPane_1.setBounds(12, 33, 160, 194);
+		contentPane.add(scrollPane_1);
+		
+		String[] personList = {
+				"알랑이","딸랑이","말랑이","최순실","박근혜",
+				"박정희","전두환","노태우","이승만","황교완",
+				"박정희","전두환","노태우","이승만","황교완"
+		};
+		
+		
+		lstAllContactPerson = new JList(personList);
+		scrollPane_1.setViewportView(lstAllContactPerson);
+		
+		btnMemoSend = new JButton("쪽 지 보 내 기");
+		btnMemoSend.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		btnMemoSend.setBounds(12, 237, 160, 35);
+		contentPane.add(btnMemoSend);
+		
+		JLabel label = new JLabel("채  팅  방  목  록");
+		label.setHorizontalAlignment(SwingConstants.LEFT);
+		label.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		label.setBounds(12, 282, 145, 25);
+		contentPane.add(label);
+		
+		String[] roomList = {
+				"고돌방","정치방","문화방","브라","브라브라",
+				"박정희","전두환","노태우","이승만","황교완",
+				"박정희","전두환","노태우","이승만","황교완"
+		};
+		
+		//JList 에 이미지표시되고 옆에 문자도 같이 목록에 넣을 수 있는지 이것을 지원하는 다른 컴포넌트가 있는지 알아본다.
+		ImageIcon[] images = {
+				new ImageIcon("resource/image/blog_icon02.png","딸랑이"),
+				new ImageIcon("resource/image/blog_icon02.png","딸랑이"),
+				new ImageIcon("resource/image/blog_icon02.png","딸랑이"),
+				new ImageIcon("resource/image/blog_icon02.png","딸랑이"),
+				new ImageIcon("resource/image/blog_icon02.png","딸랑이"),
+				new ImageIcon("resource/image/blog_icon02.png","딸랑이"),
+				new ImageIcon("resource/image/blog_icon02.png","딸랑이"),
+				new ImageIcon("resource/image/blog_icon02.png","딸랑이"),
+				new ImageIcon("resource/image/blog_icon02.png","딸랑이"),
+				new ImageIcon("resource/image/blog_icon02.png","딸랑이")
+		};
+		
+		scrollPane_2 = new JScrollPane();
+		scrollPane_2.setBounds(12, 304, 160, 194);
+		contentPane.add(scrollPane_2);
+		
+		//roomList
+		lstChatRoomList = new JList(images);
+		scrollPane_2.setViewportView(lstChatRoomList);
+		
+		
+		btnGoChatRoom = new JButton("채  팅  방  참  여");
+		btnGoChatRoom.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		btnGoChatRoom.setBounds(12, 508, 160, 35);
+		contentPane.add(btnGoChatRoom);
+		
+		btnRoomCreate = new JButton("방  만  들  기");
+		btnRoomCreate.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		btnRoomCreate.setBounds(12, 553, 160, 36);
+		contentPane.add(btnRoomCreate);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(184, 30, 491, 514);
+		contentPane.add(scrollPane);
+		
+		areTalkPart = new JTextArea();
+		areTalkPart.setText("건전한 채팅문화는 우리들의 상식  --관리자 올림\n");
+		areTalkPart.append("김석균 > 머하너!♠\n");
+		areTalkPart.append("김영호 > 딸친다.\n");
+		scrollPane.setViewportView(areTalkPart);
+		
+		fldMessage = new JTextField();
+		fldMessage.setText("전송할 채팅메시지");
+		fldMessage.setBackground(new Color(255, 255, 153));
+		fldMessage.setBounds(184, 554, 358, 35);
+		contentPane.add(fldMessage);
+		fldMessage.setColumns(10);
+		
+		btnDataSend = new JButton("전송");
+		btnDataSend.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		btnDataSend.setBounds(554, 553, 121, 36);
+		contentPane.add(btnDataSend);
+		this.setVisible(true);
+	}
+	
+	private void start() {
+		//전송버튼
+		btnDataSend.addActionListener(this);
+		//방만들기
+		btnRoomCreate.addActionListener(this);
+		//쪽지보내기
+		btnMemoSend.addActionListener(this);
+		//채팅방참여
+		btnGoChatRoom.addActionListener(this);
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == btnDataSend) {
+			//서버전송
+			String message = fldMessage.getText();
+			System.out.println(message);
+			//수신메시지 메시지창 출력
+			areTalkPart.append("전송자 > " + message + "/n");
+			
+			
+		}else if(e.getSource() == btnRoomCreate) {
+			
+		}else if(e.getSource() == btnMemoSend) {
+			
+		}else if(e.getSource() == btnGoChatRoom) {
+			
+		}
+		
+	}
+	//====================================================
+	/**
+	 * Launch the application.
+	 */
+	/**
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					new Client();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+	**/
+
+}

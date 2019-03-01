@@ -1,0 +1,121 @@
+package chatting.ui;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class Server extends JFrame implements ActionListener{
+
+	private JPanel contentPane;
+	
+	//fld : JTextField
+	private JTextField fldPort;
+	//ara : TextArea
+	JTextArea araMessage;
+	
+	//btn : JButton
+	JButton   btnServerRun; 
+	JButton   btnServerStop;
+	
+	/**
+	 * Create the frame.
+	 */
+	public Server() {
+		//ui 초기 생성한다.
+		init();
+		//이벤트 등록
+		start();	
+	}
+	
+	private void init() {
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 371, 506);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(12, 10, 331, 348);
+		contentPane.add(scrollPane);
+		
+		araMessage = new JTextArea();
+		scrollPane.setViewportView(araMessage);
+		
+		JLabel label = new JLabel("포토번호");
+		label.setBounds(12, 379, 55, 27);
+		contentPane.add(label);
+		
+		fldPort = new JTextField();
+		fldPort.setText("12345");
+		fldPort.setBounds(82, 382, 261, 24);
+		contentPane.add(fldPort);
+		fldPort.setColumns(10);
+		
+		btnServerRun = new JButton("서버실행");
+		btnServerRun.setBounds(12, 416, 165, 23);
+		contentPane.add(btnServerRun);
+		
+		btnServerStop = new JButton("서버중지");
+		btnServerStop.setEnabled(false);
+		btnServerStop.setBounds(178, 416, 165, 23);
+		contentPane.add(btnServerStop);
+		this.setVisible(true);
+	}
+	private void start() {
+		btnServerRun.addActionListener(this);
+		btnServerStop.addActionListener(this);
+
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource() == btnServerRun) {
+			
+			int port = Integer.valueOf(fldPort.getText());
+			System.out.println("포토번호 :" + port);
+			
+			
+			System.out.println("서버실행 ");
+			
+			btnServerStop.setEnabled(true);
+			
+		} else if(e.getSource() == btnServerStop) {
+			System.out.println("서버중지");
+			
+			btnServerStop.setEnabled(false);
+		}
+				
+	}
+	
+	
+	
+	
+	//======================
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					new Server();
+					
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+}

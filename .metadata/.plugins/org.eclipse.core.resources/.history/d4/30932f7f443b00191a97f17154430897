@@ -1,0 +1,104 @@
+package chatting.ui;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import javax.swing.JList;
+import javax.swing.JButton;
+import javax.swing.SwingConstants;
+import javax.swing.JTextArea;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import java.awt.Color;
+
+public class Client extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField textField;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Client frame = new Client();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Client() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 703, 639);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("전  체  접  속  자");
+		lblNewLabel.setHorizontalAlignment(SwingConstants.LEFT);
+		lblNewLabel.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		lblNewLabel.setBounds(29, 10, 145, 25);
+		contentPane.add(lblNewLabel);
+		
+		JList list = new JList();
+		list.setBounds(29, 33, 160, 194);
+		contentPane.add(list);
+		
+		JButton btnNewButton = new JButton("쪽 지 보 내 기");
+		btnNewButton.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		btnNewButton.setBounds(29, 237, 160, 35);
+		contentPane.add(btnNewButton);
+		
+		JLabel label = new JLabel("채  팅  방  목  록");
+		label.setHorizontalAlignment(SwingConstants.LEFT);
+		label.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		label.setBounds(29, 282, 145, 25);
+		contentPane.add(label);
+		
+		JList list_1 = new JList();
+		list_1.setBounds(29, 304, 160, 194);
+		contentPane.add(list_1);
+		
+		JButton button = new JButton("채  팅  방  참  여");
+		button.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		button.setBounds(29, 508, 160, 35);
+		contentPane.add(button);
+		
+		JButton button_1 = new JButton("방  만  들  기");
+		button_1.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		button_1.setBounds(29, 553, 160, 36);
+		contentPane.add(button_1);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(201, 30, 474, 514);
+		contentPane.add(scrollPane);
+		
+		JTextArea textArea = new JTextArea();
+		scrollPane.setViewportView(textArea);
+		
+		textField = new JTextField();
+		textField.setBackground(new Color(255, 255, 153));
+		textField.setBounds(201, 554, 341, 35);
+		contentPane.add(textField);
+		textField.setColumns(10);
+		
+		JButton button_2 = new JButton("전송");
+		button_2.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
+		button_2.setBounds(554, 553, 121, 36);
+		contentPane.add(button_2);
+	}
+}

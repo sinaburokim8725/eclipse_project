@@ -1,0 +1,121 @@
+package chatting.ui;
+
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JTextField;
+import javax.swing.JButton;
+
+public class ClientLogin extends JFrame implements ActionListener {
+
+	private JPanel contentPane;
+	private JTextField fldServerIP;
+	private JTextField fldServerPort;
+	private JTextField fldUserID;
+	private JButton btnRequestConnect;
+	
+
+	/**
+	 * Create the frame.
+	 */
+	public ClientLogin() {
+		init();
+		start();
+	}
+	
+	private void init() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 381, 514);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JLabel lblNewLabel = new JLabel("Server IP");
+		lblNewLabel.setFont(new Font("Consolas", Font.BOLD, 12));
+		lblNewLabel.setBounds(52, 224, 86, 25);
+		contentPane.add(lblNewLabel);
+		
+		JLabel lblServerPort = new JLabel("Server Port ");
+		lblServerPort.setFont(new Font("Consolas", Font.BOLD, 12));
+		lblServerPort.setBounds(52, 292, 105, 25);
+		contentPane.add(lblServerPort);
+		
+		JLabel lblId = new JLabel("ID");
+		lblId.setFont(new Font("Consolas", Font.BOLD, 12));
+		lblId.setBounds(52, 357, 105, 25);
+		contentPane.add(lblId);
+		
+		fldServerIP = new JTextField();
+		fldServerIP.setText("123.111.111.4");
+		fldServerIP.setBounds(139, 224, 173, 21);
+		contentPane.add(fldServerIP);
+		fldServerIP.setColumns(10);
+		
+		fldServerPort = new JTextField();
+		fldServerPort.setText("555");
+		fldServerPort.setColumns(10);
+		fldServerPort.setBounds(139, 292, 173, 21);
+		contentPane.add(fldServerPort);
+		
+		fldUserID = new JTextField();
+		fldUserID.setText("chattingUser");
+		fldUserID.setColumns(10);
+		fldUserID.setBounds(139, 357, 173, 21);
+		contentPane.add(fldUserID);
+		
+		btnRequestConnect = new JButton("접  속  요  청");
+		btnRequestConnect.setFont(new Font("Malgun Gothic", Font.BOLD, 12));
+		btnRequestConnect.setBounds(52, 407, 260, 30);
+		contentPane.add(btnRequestConnect);
+		this.setVisible(true);
+	}
+	
+	private void start() {
+		btnRequestConnect.addActionListener(this);
+	}
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == btnRequestConnect) {
+			//ip port id 서버전송 요청
+			String serverIP = fldServerIP.getText();
+			Integer serverPort = Integer.valueOf(fldServerPort.getText());
+			String userID = fldUserID.getText();
+			
+			System.out.println("  serverIP : "     + serverIP +
+					           "  serverPort : " + serverPort +
+							   "  userID : "     + userID + "\n서버접속요청");
+			
+		}
+		
+	}
+	
+	//=======================
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					new ClientLogin();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+
+
+	
+}
