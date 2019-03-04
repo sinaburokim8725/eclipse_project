@@ -99,9 +99,10 @@ public class ClientLogin extends JFrame implements ActionListener {
 			port = Integer.valueOf(fldServerPort.getText()).intValue();
 			id   = fldUserID.getText();
 			
-			System.out.println("  serverIP : "     + ip +
+			System.out.println("서버접속요청 :" +
+							   "  serverIP : "     + ip +
 					           "  serverPort : " + port +
-							   "  userID : "     + id + "\n서버접속요청");
+							   "  userID : "     + id + "\n");
 			
 			//접속승인시 로그인 화면에서 채팅화면으로 전환
 			//서버사이드 소켓요청

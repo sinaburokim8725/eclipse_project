@@ -1,5 +1,29 @@
 package chatting.ui;
-
+/**
+ * 개발 노트
+ * 목적:
+ * 멀티쓰레드 환경에서 다자간 채팅 기능 구현
+ * 
+ * 진척상항
+ * 1.멀티쓰레드 구현
+ * 2.채팅화면에서 전체 접속자  목록 보여주기 구현
+ * 	2.1 현상:
+ * 		1 JList 목록뵤여주기에서 간혹 접속자가 목록에 나타나지 않을 경우가 있음
+ *	2.2 방안:
+ *		1.아직은 완전한 해결을  하지 못함 JList의 특성을 좀덕 파악할 필요가 있음
+ *3.개발 계획:
+ *	1.전체 접속자 목록에서 선택한 접속자에게 쪽지 보내는 기능을 구현한다.(초기완료)
+ *	2.채팅방 만들기 기능을 구현 한다.
+ *	3.채팅방에 참여 기능 구현.
+ *	기타 향후 개발하면서 필요한 기능들은 추가한다. 
+ *4.개선사항
+ *	1.메시지를 구분자와 함께 문자열로 만들어서 데이터 스트림을 쏘는 데 오브젝트로 스트림을 쏘고싶다 구분자로 받아서 잘라서 비교하고 전송할때 다시 구분넣고 하는 것이 비효율적이다.<string.split이 아주뛰어난 기능을한다.> 
+ *5.issue
+ *00001. JList에 리스트 추가할때 가끔씩 화면에 리스트가 보이지 않는다.
+ *6.fix
+ *0001.초기 리스트 추가할필요 없는 곳에 컴포넌트에 아이템을 추가하는 것을 
+ *업데이할때 한꺼번에 하게 수정했다. 
+ */
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
@@ -39,11 +63,16 @@ public class Server extends JFrame implements ActionListener{
 	//NetWork 자원
 	private ServerSocket serverSocket;
 	private Socket reqSocket;
-	private Vector vc = new Vector();
 	
 	
+	//송신 메시지 헤드
+	private static String NEW_USER = "NEW_USER";
+	private static String OLD_USER = "OLD_USER";
+	
+	private Vector vcUserList;
 	
 	public Server() {
+		vcUserList = new Vector();
 		//ui 초기 생성한다.
 		init();
 		//이벤트 등록
@@ -98,7 +127,8 @@ public class Server extends JFrame implements ActionListener{
 		if (e.getSource() == btnServerRun) { //서버실행
 			//System.out.println("서버실행 ");
 			//System.out.println("포토번호 :" + port);
-			int port = Integer.valueOf(fldPort.getText()).intValue();
+			//int Integer.parseInt(s);
+			int port = Integer.valueOf(fldPort.getText().trim()).intValue();
 			try {
 				runServerSocket(port);
 				
@@ -206,10 +236,12 @@ public class Server extends JFrame implements ActionListener{
 		private OutputStream os;
 		private DataOutputStream dos;
 		
+		
 		//생성자 
 		public UserInfo(Socket userSocket) {
 			
 			this.userSocket = userSocket;
+			
 			netConfig();
 			
 		}
@@ -220,15 +252,69 @@ public class Server extends JFrame implements ActionListener{
 				dis= new DataInputStream(is);
 				os = userSocket.getOutputStream();
 				dos= new DataOutputStream(os);
-				//사용자 닉네임
-				nickName = dis.readUTF();
-				areMessage.append(nickName + "님  접속! ♬ \n");
+				//사용자 닉네임 setter로 세팅
+				setNickName(dis.readUTF());
+				//nickName = dis.readUTF();
+				areMessage.append(getNickName() + "님  접속! ♬ \n");
+				
+				//추가 :  기존 접속된 사용자들에게 새로운 사용자 알림. 향후 별도의 메쏘드로 관리
+				brodcast(NEW_USER + ";" + nickName);
+				
+				//신규유저에게 기존접속자 목록을 통보함.
+				
+				for(int i = 0; i < vcUserList.size(); i++) {
+					UserInfo u = (UserInfo)vcUserList.elementAt(i);
+					System.out.println("기존접속자: "+ u.getNickName() + "\n");
+					sendMessage(OLD_USER + ";" + u.getNickName().trim());
+					
+				}
+				
+				//noticeUserList();
+				
+				//추가 2018.3.4 : 기존접속자에게 자신의 접속을 알려준후 자신도 기존접속자 목록에 추가한다.
+				vcUserList.add(this);
+				brodcast("USER_LIST_UPDATE;");
 				
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 			
+		}
+		/*
+		 * 
+		 */
+		private void brodcast(String str) {
+			//추가 19.3.4:기존 접속된 사용자들에게 새로운 사용자 알림. 향후 별도의 메쏘드로 관리
+			for (int i = 0; i < vcUserList.size(); i++) {
+				//
+				UserInfo u = (UserInfo)vcUserList.elementAt(i);
+				//구분자 : ; <== 로한다.
+				u.sendMessage(str);
+				
+			}
+			
+			//끝
+		}
+		
+		//notice
+		private void noticeUserList() {
+			
+			for(int i = 0; i < vcUserList.size(); i++) {
+				UserInfo u = (UserInfo)vcUserList.elementAt(i);
+				//System.out.println("기존접속자: "+ u.getNickName() + "\n");
+				this.sendMessage(OLD_USER + ";" + u.getNickName().trim());
+				
+			}
+			//System.out.println("noticeUserList() end ");
+			/*
+			 * 개선사항:
+			 * 1.새로운 접속이 생길때마다 기준접속자 수만큼 소켓통신을한다.
+			 * 
+			 * 해결방안 :
+			 * 1.새로운 접속이 생길때마다 기준접속자 목록을 한꺼번에 보낸다.
+			 * 즉 서버의 오버헤드를 줄이고 클라이언트의 자원 사용하게끔 한다.
+			*/
 		}
 		
 		@Override
@@ -246,23 +332,57 @@ public class Server extends JFrame implements ActionListener{
 				
 				
 				String msg = "";
+				//msg 접속한 사용자로부터 수신한 메시지
 				msg = dis.readUTF();
 				
 				areMessage.append(nickName + "님의 말쌈 > " + msg + "\n");
+				
+				//클아이언트로 부터 들어오는 메시지를 헤드별로 구분해서 처리한다.
+				if(msg != null) {
+					if(msg.split(";")[0].equals("NOTE")) {
+						searchNoteUser(msg);
+					}
+				}
 				
 			} catch (IOException e) {
 				
 				e.printStackTrace();
 			}
-			
-			
 		}
-		
+		//클라이언트의 다양한 요청은 헤드로 구분해서 헤드별 지침에 따라 분류한다.
+		//구분하다 : Distinguish
+		private void searchNoteUser(String msg) {
+			//양식은 > 헤드;fromid;toId;메시지
+			String head = null,fromId = null,toId = null,note = null;
+			
+			if(msg != null) {
+				head   = msg.split(";")[0];
+				fromId = msg.split(";")[1];
+				toId   = msg.split(";")[2];
+				note   = msg.split(";")[3];
+				//System.out.println("head : " + head +" fromId : " + fromId + " toId : " + toId + " 쪽지내용 : " + note );
+				//다음단계: to 유저에게 메시지를 전달한다.
+				for (int i = 0; i < vcUserList.size(); i++ ){
+					UserInfo u = (UserInfo)vcUserList.elementAt(i);
+					
+					System.out.println("쪽지 수신 > " + u.getNickName() + "   toId > " + toId ) ;
+					if(u.getNickName().equals(toId)) {
+						
+						u.sendMessage(head + ";" + fromId + ";" + note);
+					}
+				}
+			}
+		}
+		/**
+		 * 
+		 * @param str : 송신할 메시지
+		 */
 		private void sendMessage(String str) {
 			try {
 				
 				
 				dos.writeUTF(str);
+				dos.flush();
 				
 			} catch (IOException e) {
 				
@@ -270,7 +390,19 @@ public class Server extends JFrame implements ActionListener{
 			}
 			
 		}
-	}
-	
-	
+
+//////////////////////////////
+//get set 메쏘드
+/////////////////////////////
+		
+		public String getNickName() {
+			return nickName;
+		}
+
+		public void setNickName(String nickName) {
+			this.nickName = nickName;
+		}
+		
+		//===========================
+	}//end class UserInfo
 }
