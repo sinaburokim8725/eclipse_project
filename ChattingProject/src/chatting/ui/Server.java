@@ -23,9 +23,13 @@ package chatting.ui;
  *6.fix
  *0001.초기 리스트 추가할필요 없는 곳에 컴포넌트에 아이템을 추가하는 것을 
  *업데이할때 한꺼번에 하게 수정했다. 
+ *
+ *이클립스에서 수정함
+ * 인테리 j에서 수정함.
  */
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import sun.rmi.server.UnicastServerRef;
+
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.DataInputStream;
@@ -70,9 +74,11 @@ public class Server extends JFrame implements ActionListener{
 	private static String OLD_USER = "OLD_USER";
 	
 	private Vector vcUserList;
+	private Vector vcRoomList;
 	
 	public Server() {
 		vcUserList = new Vector();
+		vcRoomList = new Vector();
 		//ui 초기 생성한다.
 		init();
 		//이벤트 등록
@@ -235,7 +241,7 @@ public class Server extends JFrame implements ActionListener{
 		private DataInputStream dis;
 		private OutputStream os;
 		private DataOutputStream dos;
-		
+		private String roomList;
 		
 		//생성자 
 		public UserInfo(Socket userSocket) {
@@ -254,17 +260,18 @@ public class Server extends JFrame implements ActionListener{
 				dos= new DataOutputStream(os);
 				//사용자 닉네임 setter로 세팅
 				setNickName(dis.readUTF());
+				
 				//nickName = dis.readUTF();
 				areMessage.append(getNickName() + "님  접속! ♬ \n");
 				
 				//추가 :  기존 접속된 사용자들에게 새로운 사용자 알림. 향후 별도의 메쏘드로 관리
-				brodcast(NEW_USER + ";" + nickName);
+				brodCast(NEW_USER + ";" + nickName);
 				
 				//신규유저에게 기존접속자 목록을 통보함.
-				
 				for(int i = 0; i < vcUserList.size(); i++) {
+					
 					UserInfo u = (UserInfo)vcUserList.elementAt(i);
-					System.out.println("기존접속자: "+ u.getNickName() + "\n");
+					//System.out.println("기존접속자: "+ u.getNickName() + "\n");
 					sendMessage(OLD_USER + ";" + u.getNickName().trim());
 					
 				}
@@ -273,18 +280,42 @@ public class Server extends JFrame implements ActionListener{
 				
 				//추가 2018.3.4 : 기존접속자에게 자신의 접속을 알려준후 자신도 기존접속자 목록에 추가한다.
 				vcUserList.add(this);
-				brodcast("USER_LIST_UPDATE;");
-				
+				brodCast("USER_LIST_UPDATE;");
+
+				//추가 2019.3.6 : 채팅방 목록을 송신한다.
+				setRoomList();
+				sendMessage(roomList);
+				//채팅방목록 통지
+				//brodCast(getRoomList());
+				//JList 컴포넌트 업데이트
+				sendMessage("ROOM_LIST_UPDATE");
+
 			} catch (IOException e) {
 				
 				e.printStackTrace();
 			}
 			
 		}
+
+		/**
+		 *
+		 */
+		private void setRoomList() {
+			//=====================
+			roomList = "ROOM_LIST";
+			//추가 2019.3.6 : 채팅방 목록을 송신한다.메소드화
+			for (int i = 0; i < vcRoomList.size(); i++) {
+
+				RoomInfo roomInfo = (RoomInfo) vcRoomList.elementAt(i);
+
+				roomList += ";" + roomInfo.getRoomName();
+			}
+			System.out.println("채팅방리스트 > " + roomList);
+		}
 		/*
 		 * 
 		 */
-		private void brodcast(String str) {
+		private void brodCast(String str) {
 			//추가 19.3.4:기존 접속된 사용자들에게 새로운 사용자 알림. 향후 별도의 메쏘드로 관리
 			for (int i = 0; i < vcUserList.size(); i++) {
 				//
@@ -335,12 +366,90 @@ public class Server extends JFrame implements ActionListener{
 				//msg 접속한 사용자로부터 수신한 메시지
 				msg = dis.readUTF();
 				
-				areMessage.append(nickName + "님의 말쌈 > " + msg + "\n");
+				areMessage.append(nickName + "님의 채팅글 > " + msg + "\n");
 				
-				//클아이언트로 부터 들어오는 메시지를 헤드별로 구분해서 처리한다.
+				//클라이언트로 부터 들어오는 메시지를 헤드별로 구분해서 처리한다.
 				if(msg != null) {
 					if(msg.split(";")[0].equals("NOTE")) {
 						searchNoteUser(msg);
+					} else if (msg.split(";")[0].equals("CREATE_ROOM")) {//채팅방 만들기
+						createRoom(msg);
+
+					} else if (msg.split(";")[0].equals("CHAT")) {//참여한방 인원들에게 채팅 메시지 전송
+						//================
+						// 수신형식: CHAT;입장한방;전송자;전송내용
+						//참여방 찾아서 그방속의 인원들에게 채팅글 전송
+						for (int i = 0; i < vcRoomList.size(); i++) {
+							RoomInfo roomInfo = (RoomInfo) vcRoomList.elementAt(i);
+							String roomName = roomInfo.getRoomName();
+							if (msg.split(";")[1].equals(roomName)) {
+								for (int j = 0; j < roomInfo.getVcRoomUserList().size(); j++) {
+									UserInfo userInfo = (UserInfo) roomInfo.getVcRoomUserList().elementAt(j);
+									userInfo.sendMessage(msg);
+								}
+							}
+
+						}
+
+						//================
+					} else if (msg.split(";")[0].equals("JOIN_ROOM")) {//채팅방 참여하기
+						/**
+						 * 1.접속한 방을 찾는다.
+						 * 2.방인원에게 ID 입장을 알린다.
+						 * 99.찾은 방에 사용자 정보를 등록한다.
+						 * 3.참여인원 목록 송신
+						 *
+						 * <방만들기>
+						 *     2.참여인원 제한하기
+						 *     3.공개방 비공개방(비밀번호 설정)
+						 *     1.채팅방만들때 성별체크하기
+						 * </방만들기>
+						 */
+						//수신형식: JOIN_ROOM;방이름;ID
+						//======================
+						System.out.println("채팅방 참여하기 Server ==> 송신");
+						String jRoom = msg.split(";")[1];
+						String uId = msg.split(";")[2];
+						//신규참여 인원 클라이언트 채팅화면 설정을위한 참여인원 목록 송신
+						String joinUserList = "";
+
+						System.out.println("참여방 > " + jRoom + "\t신규참가자 > " + uId);
+
+						boolean isFind = false;
+						for (int i = 0; i < vcRoomList.size(); i++) {
+
+							RoomInfo rInfo = (RoomInfo) vcRoomList.elementAt(i);
+
+							//접속방찾기
+							if (rInfo.getRoomName().equals(jRoom)) {
+								//id 입장하기 보내기
+								for (int j = 0; j < rInfo.getVcRoomUserList().size(); j++) {
+									UserInfo u = (UserInfo) rInfo.getVcRoomUserList().elementAt(i);
+									//참여구성원들에게 보내는 송신형식 : JOIN_NEW_USER;신규입장인원
+									u.sendMessage("JOIN_NEW_USER" + ";" + uId);
+									//채팅방 참여시 클라이언트 화면설정 정보
+									//채팅방 참여인원
+									joinUserList += u.getNickName()+ ";";
+
+								}
+								//찾은 방에 사용자 정보를 등록한다
+								rInfo.getVcRoomUserList().add(this);
+
+								//방참여인원 채팅방 초기화면 설정용 정보 송신
+								//참여한 자신의 화면에 보내는 송신형식:
+								//SELF_SCREEN_CONFIG;참여방;채팅방인원
+								System.out.println("SELF_SCREEN_CONFIG Server 송신 => ");
+								sendMessage("SELF_SCREEN_CONFIG;"+jRoom + ";" +joinUserList);
+
+
+								//for구문 탈출코드
+								isFind = true;
+							}
+							if (isFind) {
+								break;
+							}
+						}//for
+						//========끝============
 					}
 				}
 				
@@ -349,7 +458,56 @@ public class Server extends JFrame implements ActionListener{
 				e.printStackTrace();
 			}
 		}
-		//클라이언트의 다양한 요청은 헤드로 구분해서 헤드별 지침에 따라 분류한다.
+		//클라이언트의 다양한 요청은 헤드로 구분해서 헤드별 지침에 따라 작업한다.
+
+		//기능별 서버작업 시작
+		//===============================
+
+		/**
+		 *
+		 * @param msg
+		 */
+		private void createRoom(String msg) {
+			String roomName = null;
+			if (msg.split(";").length >= 2) {
+				roomName = msg.split(";")[1];
+
+			}
+			boolean isRoom = false;
+			//1.같은 방이존재하는지 확인
+			for (int i = 0; i < vcRoomList.size(); i++) {
+				RoomInfo ri = (RoomInfo) vcRoomList.elementAt(i);
+				//
+				if (ri.getRoomName().equals(roomName)) {//방이존재할경우
+					isRoom = true;
+					//sendMessage("CREATE_ROOM_FAIL" + ";");
+					break;
+				}
+			}
+			//채팅방 존재여부에 따른 작업
+			if (isRoom) {//존재할경우
+				sendMessage("CREATE_ROOM" + ";" + "HEAD_FAIL");
+			} else {//존재하지 않을경우
+				//새로운 채팅방 개설
+				RoomInfo newRoom = new RoomInfo(roomName, this);
+				//kim
+
+
+				//나자신을 포함한 모든접속자들에게 채팅방 목록 통지
+				brodCast("ROOM_LIST" + ";" + roomName );
+
+				//채팅방 목록업데이트
+				brodCast("ROOM_LIST_UPDATE");
+
+				//개설자에게 방개설 통지
+				sendMessage("CREATE_ROOM" + ";" + roomName);
+
+				//Vector 채팅방 리스트에 추가 한다.
+				boolean isAdd = vcRoomList.add(newRoom);
+			}
+
+		}
+
 		//구분하다 : Distinguish
 		private void searchNoteUser(String msg) {
 			//양식은 > 헤드;fromid;toId;메시지
@@ -373,6 +531,9 @@ public class Server extends JFrame implements ActionListener{
 				}
 			}
 		}
+		//===============================
+
+
 		/**
 		 * 
 		 * @param str : 송신할 메시지
@@ -402,7 +563,82 @@ public class Server extends JFrame implements ActionListener{
 		public void setNickName(String nickName) {
 			this.nickName = nickName;
 		}
-		
+
+		public String getRoomList() {
+			return roomList;
+		}
+
+		public void setRoomList(String roomList) {
+			this.roomList = roomList;
+		}
+
 		//===========================
 	}//end class UserInfo
+
+
+	//////////////////////////////////
+	////내부클래스
+	/////////////////////////////////
+
+	/**
+	 * 기능:
+	 * 1.유저가 만든 채팅방 접속유저에게 통보 및 채팅방 목록란에 표시한다.
+	 *
+	 */
+	class RoomInfo {
+
+		//채팅방 이름
+		private String roomName;
+		//채팅방에 참여한 접속자들의 정보
+		private Vector vcRoomUserList;
+		//
+		private UserInfo userInfo;
+
+		//방장 : 처음에는 방을 만들 이지만
+		//어떤 사유든지 방장을 넘겨줘야 할 사유가 생길수 있음
+		//방장은 다음 방장을 선출할 권한이 있다. roomManager
+		private String roomManager;
+
+		public RoomInfo(String roomName, UserInfo useInfo) {
+			this.roomName = roomName;
+			this.userInfo = useInfo;
+			vcRoomUserList = new Vector();
+			config();
+		}
+
+		private void config() {
+			//방장설정
+			setRoomManager(userInfo.getNickName());
+			//채팅방참여 접속자 설정
+			setVcRoomUserList(userInfo);
+
+		}
+
+		public String getRoomName() {
+			return roomName;
+		}
+
+		public void setRoomName(String roomName) {
+			this.roomName = roomName;
+		}
+
+		public Vector getVcRoomUserList() {
+			return vcRoomUserList;
+		}
+
+		public void setVcRoomUserList(UserInfo userInfo) {
+			vcRoomUserList.add(userInfo);
+		}
+
+		public String getRoomManager() {
+			return roomManager;
+		}
+
+		public void setRoomManager(String roomManager) {
+			this.roomManager = roomManager;
+		}
+	}
+
+
+
 }

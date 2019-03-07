@@ -109,13 +109,25 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 	private static String NEW_USER = "NEW_USER";
 	private static String OLD_USER = "OLD_USER";
 	
-	//추가 :
-	//서버의 송신메시지 헤드 구분
+	//기타설정
 	StringTokenizer st;
+
+	//내가 참여한 방이름
+	private String myRoom;
 	//끝
 	 
 	public Client() {
-		
+		/*
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					init(); 
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		**/
 	}
 	
 	public Client(Socket resSocket,String id) {
@@ -147,10 +159,13 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 			sendMessage(id);
 			//전체접속자 란에 자기를 표시한다.id 대신에 자기를 표현할 나 로 한다.
 			vcCCUList.add(id);
+
+			//추가 2019.3.6
+			//fix00001
 			//lstAllContactPerson.setListData(vcCCUList);
 			
 			//debug
-			System.out.println("vcCCUList.size() : " + vcCCUList.size());
+			//System.out.println("vcCCUList.size() : " + vcCCUList.size());
 			/**
 			for(int i = 0 ; i < vcCCUList.size(); i++) {
 				String u = (String)vcCCUList.elementAt(i);
@@ -216,22 +231,115 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 			 * 기능별분리  1.전체접속자 목록출력  2.수신한 쪽지 내용 출력 
 			 */
 			if(msg != null) {
-				System.out.println("헤드문자 >> " + msg.split(";")[0]);
+				System.out.println("헤드문자 수신 Client>> " + msg.split(";")[0]);
 				
 				if(msg.split(";")[0].equals("NEW_USER") || msg.split(";")[0].equals(OLD_USER)) {//접속자목록 출력작업
+
 					//접속자 목록을 출력한다.
 					setContactUserList(msg);
 					
 				}else if(msg.split(";")[0].equals("NOTE")) {//수신된 쪽지 내용 출력
+
 					//수신 쪽지 내용 출력
 					showNote(msg);
-				}else if(msg.split(";")[0].equals("USER_LIST_UPDATE")) {//Jlist에 업데이트할경우 호출한다.
+				}else if (msg.split(";")[0].equals("ROOM_LIST")) {
+
+					//채팅방 목록을 파싱해서 채팅방 목록 vector에 추가한다.
+					setRoomList(msg);
+
+				} else if (msg.split(";")[0].equals("CREATE_ROOM")) {//방개설
+					if (msg.split(";").length >= 2) {
+
+						if (msg.split(";")[1].equals("HEAD_FAIL")) {
+
+							JOptionPane.showMessageDialog(null, "개설된 방입니다.", "알림", JOptionPane.ERROR_MESSAGE);
+						} else {//성공적으로 방개설 되었을때
+							/*
+							고려사항:
+							1.채팅방 입장했다면 화면전환이 필요할것이다.
+							1.1 좌측 상단 전체접속자란 변경사항없음
+							1.2 쪽지보내기 변경사항없음
+							1.3 좌측 하단 개설된방이름 > 방참여 인원란으로
+							1.4 방개설 버튼 > 참여인원들중에서 선택 비밀글 보내기
+							1.5 참여하기 > 나가기 버튼(방장일경우 방장 권한 넘긴후 나가기
+							1.6 만일 방장 혼자일 때 나가기 버튼 클릭시:
+							개설된 방은 없어지고 접속화면으로 나온다.
+							1.7 참여인원들 중에 방장 권한 넘기기(방장권한)
+							 */
+							//개설된 방이름: 채팅글전송시 서버에서
+							//채팅방 참여인원에게 채팅글 전송하기위한 용도.
+							myRoom = msg.split(";")[1];
+
+							//최초 채팅방 개설자가 자신이 만든 채팅방에
+							//입장한 상태를 상정해서 메시지를 뿌린다.
+							//채팅창 초기화(개설된 방의 채팅창
+							areTalkPart.setText("");
+
+							//관리자
+							areTalkPart.append("관리자 > " + id + "님께서 만드신 " + myRoom + "으로 이동했습니다." + "\n");
+							areTalkPart.append("관리자 > " + "비매너 채팅인원에게는 방장으로써 퇴장조치 할 수있는 권한이 있습니다." + "\n");
+
+
+
+						}
+
+					}
+				} else if (msg.split(";")[0].equals("CHAT")) {//채팅글일경우
+					//수신형식 => CHAT;입장한방;전송자;전송내용
+					String id = msg.split(";")[2];
+					String m  = msg.split(";")[3];
+					areTalkPart.append(id + " > " + m + "\n");
+					//채팅글 필드 전송메시지 삭제
+					fldMessage.setText("");
+
+
+				} else if (msg.split(";")[0].equals("USER_LIST_UPDATE")) {//추가 fix00001
+
 					//동작이 안되는 경우가 있다. 학인해볼것
-				    //lstAllContactPerson.updateUI();
+					//lstAllContactPerson.updateUI();
 					lstAllContactPerson.setListData(vcCCUList);
-					
-				}else if(msg.split(";")[0].equals("ROOM_LIST_UPDATE")) {
+
+				} else if (msg.split(";")[0].equals("ROOM_LIST_UPDATE")) {
+					//JList 컴포넌트를 업데이트 한다.
 					lstChatRoomList.setListData(vcRoomList);
+				} else if (msg.split(";")[0].equals("JOIN_NEW_USER")) {//방참여
+					//수신형식: JOIN_NEW_USER;ID
+					/**
+					 * 1.id님께서 입장하셨습니다.
+					 * 2.채팅중인데 새로입장 메시지가 채팅 중간 와서는안된다.
+					 *
+					 */
+					System.out.println("JOIN_NEW_USER Client");
+					System.out.println("신규유저 > " + msg);
+					String m = msg.split(";")[1];
+					areTalkPart.insert(m + "님께서 입장하셨습니다.\n", 0);
+
+				} else if (msg.split(";")[0].equals("SELF_SCREEN_CONFIG")) {//채팅방 최초 입장후 화면설정
+					System.out.println("채팅방 참여인원 > " + msg);
+
+					//수신형식: SELF_SCREEN_CONFIG;참여방;채팅방인원
+					myRoom = msg.split(";")[1];
+					/**
+					String[] temp = msg.split(";");
+					String[] joinPeople = new String[0];
+
+					//참여인원목록
+					int j = 0;
+					for (int i = 2; i < temp.length; i++) {
+						System.out.println("temp[" + i + "] " + temp[i]);
+						if(temp[i] != null){
+							joinPeople[j] = temp[i];
+							j++;
+						}
+					}
+ **/
+					//채팅방접속인원 vector가필요하다.
+					//채팅방 목록에 참여인원 리스트를 뿌리고
+					//Jlabel 텍스트도 >> 참 여 인 원 으로 바꾼다.
+
+					//채팅필드 세팅
+					areTalkPart.setText("");
+					areTalkPart.append("관리자 > " + id + "님은 " + myRoom + "채팅방으로 이동하셨습니다.\n");
 				}
 				
 			}
@@ -246,6 +354,18 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 			e.printStackTrace();
 		}
 		
+	}
+
+	/**
+	 *
+	 */
+	private void setRoomList(String msg) {
+		String[] list;
+		list = msg.split(";");
+		for (int i = 1; i < list.length; i++) {
+			vcRoomList.addElement(list[i]);
+		}
+		System.out.println("개설된 방수 > " + (list.length - 1));
 	}
 	/**
 	 * 
@@ -273,7 +393,7 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 			if(head.equals(NEW_USER)) {
 				//추가 19.3.4 : 전체접속란에 목록 추가한다.
 				vcCCUList.add(body);
-				//가끔씩 리스트가 보이지 않는 오류 해결? 두고보장
+				//추가 fix00001 가끔씩 리스트가 보이지 않는 오류 해결? 두고보장
 				//lstAllContactPerson.setListData(vcCCUList);
 				
 				//lstAllContactPerson.updateUI();
@@ -283,7 +403,7 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 			} else if(head.equals(OLD_USER)) {
 				System.out.println("OLD_USER :" + body + "\n");
 				vcCCUList.add(body);
-				//issue01 : 리스트 아이템 보이지 않을경우
+				//추가 fix00001 : 리스트 아이템 보이지 않을경우
 				//lstAllContactPerson.setListData(vcCCUList);
 			} else if(head.equals("ADMIM")) {
 				
@@ -367,7 +487,7 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 		//리스트의 단일선택모드변경
 		lstAllContactPerson.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		scrollPane_1.setViewportView(lstAllContactPerson);
-		//추가 
+		//추가 fix00001
 		lstAllContactPerson.setListData(vcCCUList);
 		
 		
@@ -381,12 +501,6 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 		label.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
 		label.setBounds(12, 282, 145, 25);
 		contentPane.add(label);
-		
-		String[] roomList = {
-				"고돌방","정치방","문화방","브라","브라브라",
-				"박정희","전두환","노태우","이승만","황교완",
-				"박정희","전두환","노태우","이승만","황교완"
-		};
 		
 		Map<Object, Icon> icons = new HashMap<Object, Icon>();
 		icons.put("monkey", new ImageIcon("resource/image/monky.png"));
@@ -410,14 +524,15 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 		//
 		lstChatRoomList.setCellRenderer(new IconListRenderer(icons));
 		
-		Icon icon =new ImageIcon("resource/image/monky.png");
+		//Icon icon =new ImageIcon("resource/image/monky.png");
 		
 	
 		scrollPane_2 = new JScrollPane();
 		scrollPane_2.setBounds(12, 304, 160, 194);
 		scrollPane_2.setViewportView(lstChatRoomList);
 		contentPane.add(scrollPane_2);
-		lstChatRoomList.setListData(vcRoomList);
+		//추가 fix00001
+		//lstChatRoomList.setListData(vcRoomList);
 		
 		btnJoinChatRoom = new JButton("채  팅  방  참  여");
 		btnJoinChatRoom.setFont(new Font("Malgun Gothic", Font.BOLD, 14));
@@ -474,18 +589,31 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 		if(e.getSource() == btnDataSend) { //전송
 			//서버전송
 			String message = fldMessage.getText();
-			System.out.println(message);
-			
-			sendMessage(message);
+			//System.out.println(message);
+			//전송규칙 CHAT;입장한방;전송자;전송내용
+			System.out.println("채팅글 >" + "CHAT" + ";" + myRoom + ";"+ id + ";" + message);
+
+			sendMessage("CHAT" + ";" + myRoom + ";"+ id + ";" + message);
+
 			
 			
 			//수신메시지 메시지창 출력
-			areTalkPart.append("전송자 > " + message + "\n");
+			//areTalkPart.append("전송자 > " + message + "\n");
 			
 			
 		}else if(e.getSource() == btnRoomCreate) { //채팅방 만들기
-			
-			System.out.println("채탱방 만들기");
+			/**
+			 * 개선사항:
+			 * 1.채팅방을 만들때
+			 */
+			System.out.println("채팅방 만들기");
+
+			//채팅방 만들기 다이얼로그 박스띄우기
+			String roomName = JOptionPane.showInputDialog("채팅방 이름");
+			if (roomName != null) {
+				//헤드정보:CREATE_ROOM
+				sendMessage("CREATE_ROOM" + ";" + roomName);
+			}
 			
 		}else if(e.getSource() == btnMemoSend) { //쪽지보내기
 			//선택된 접속자에게 쪽지보내기
@@ -506,19 +634,27 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 				
 			}
 			
-		}else if(e.getSource() == btnJoinChatRoom) {
-			
-			System.out.println(selectedJoinRoom + " 방으로 이동합니다.");
+		}else if(e.getSource() == btnJoinChatRoom) {//채팅방 참여하기
+			//선택된 채팅방은 널값이 되어선 안된다.
+			System.out.println("채팅방 참여하기 Client ==> 송신");
+			//선택한 방으로 입장하기
+			//송신형식: JOIN_ROOM;방이름;ID
+			sendMessage("JOIN_ROOM" + ";" + selectedJoinRoom + ";" + id);
 		}
 		
 	}
 	//리스트 아이템 선택 이벤트
 	@Override
 	public void valueChanged(ListSelectionEvent e) {
-		//선택된 접속자 아이템 얻기
-		selectedPerson = (String)lstAllContactPerson.getSelectedValue();
-		//선택된 방가져오기
-		selectedJoinRoom = lstChatRoomList.getName();
+		if(e.getSource() == lstAllContactPerson ){
+			//선택된 접속자 아이템 얻기
+			selectedPerson = (String)lstAllContactPerson.getSelectedValue();
+
+		}else if(e.getSource() == lstChatRoomList){
+			//선택된 방가져오기
+			selectedJoinRoom = (String)lstChatRoomList.getSelectedValue();
+		}
+
 	}
 	
 	
@@ -527,7 +663,7 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 	/**
 	 * Launch the application.
 	 */
-	/**
+/**
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -540,7 +676,4 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 		});
 	}
 	**/
-
-	
-
 }
