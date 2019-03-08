@@ -29,7 +29,6 @@
 <fullyQualifiedTypeName name="java.io.BufferedReader"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.metal.MetalIconFactory"/>
 <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
-<fullyQualifiedTypeName name="compont.jlist.IconListRenderer"/>
 <fullyQualifiedTypeName name="javax.swing.Icon"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.util.StringTokenizer"/>
@@ -41,4 +40,6 @@
 <fullyQualifiedTypeName name="chatting.ui.Server.UserInfo"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
 <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
+<fullyQualifiedTypeName name="javax.print.DocFlavor.URL"/>
+<fullyQualifiedTypeName name="compont.jlist.IconListRenderer"/>
 </qualifiedTypeNameHistroy>

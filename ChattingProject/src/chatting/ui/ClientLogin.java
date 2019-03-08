@@ -3,10 +3,8 @@ package chatting.ui;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -14,17 +12,16 @@ import java.io.IOException;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-import javax.swing.JTextField;
-import javax.swing.JButton;
-
 public class ClientLogin extends JFrame implements ActionListener {
 
 	private JPanel contentPane;
 	private JTextField fldServerIP;
 	private JTextField fldServerPort;
 	private JTextField fldUserID;
-	private JButton btnRequestConnect;
-	
+	protected JButton btnRequestConnect;
+	private JOptionPane pane;
+	//
+	private static ClientLogin clientLogin;
 	//네트워크 자원 
 	private Socket socket;
 	private String ip;
@@ -37,8 +34,28 @@ public class ClientLogin extends JFrame implements ActionListener {
 		init();
 		start();
 	}
-	
+
+	/**
+	 *
+	 * @param msgType
+	 * @param title
+	 * @param msg
+	 */
+	private void setMessage(int msgType, String title, String msg) {
+		pane.setMessage(msg);
+		pane.setMessageType(msgType);
+		//pane.setOptionType(JOptionPane.YES_NO_CANCEL_OPTION);
+
+		JDialog dialog = pane.createDialog(null, title);
+		//false : 모달리스 창  ture : 모달창
+		dialog.setModal(false);
+		dialog.setVisible(true);
+	}
+	//
 	private void init() {
+		//예외사항 발생시 띄울 메시지 창 생성
+		pane  = new JOptionPane();
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 381, 514);
 		contentPane = new JPanel();
@@ -92,46 +109,53 @@ public class ClientLogin extends JFrame implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == btnRequestConnect) {
-			btnRequestConnect.setEnabled(false);
-			//ip port id 서버전송 요청
-			ip   = fldServerIP.getText().trim();
-			port = Integer.valueOf(fldServerPort.getText()).intValue();
-			id   = fldUserID.getText();
-			
-			System.out.println("서버접속요청 :" +
-							   "  serverIP : "     + ip +
-					           "  serverPort : " + port +
-							   "  userID : "     + id + "\n");
-			
-			//접속승인시 로그인 화면에서 채팅화면으로 전환
-			//서버사이드 소켓요청
-			Socket resSocket = clientSocket(ip, port);
-			
-			//resSocket = null;
-			//채팅화면 호출
-			if(resSocket != null) {//연결성공
-				callChatClient(resSocket);
-				
-				btnRequestConnect.setText("Connected");
-			} else {//연결실패시 
-				btnRequestConnect.setText("Failed Connect Retry");
-				btnRequestConnect.setEnabled(true);
+		if(e.getSource() == btnRequestConnect) {//로그인클릭
+
+			if (fldServerIP.getText().length() == 0) {
+				fldServerIP.setText("Ip 를 입력하세요.");
+				fldServerIP.requestFocus();
+			} else if (fldServerPort.getText().length() == 0) {
+				fldServerPort.setText("Port 번호를 입력하세요");
+				fldServerPort.requestFocus();
+			} else if (fldUserID.getText().length() == 0) {
+				fldUserID.setText("ID 를 입력하세요.");
+				fldUserID.requestFocus();
+			} else {
+				/////////////////////////////
+				btnRequestConnect.setEnabled(false);
+				//ip port id 서버전송 요청
+				ip   = fldServerIP.getText().trim();
+				port = Integer.valueOf(fldServerPort.getText()).intValue();
+				id   = fldUserID.getText();
+
+				System.out.println("서버접속요청 :" +
+						"  serverIP : "     + ip +
+						"  serverPort : " + port +
+						"  userID : "     + id + "\n");
+
+				//접속승인시 로그인 화면에서 채팅화면으로 전환
+				//서버사이드 소켓요청
+				Socket resSocket = clientSocket(ip, port);
+
+				//resSocket = null;
+				//채팅화면 호출
+				if(resSocket != null) {//연결성공
+					callChatClient(resSocket);
+					btnRequestConnect.setEnabled(false);
+					btnRequestConnect.setText("Connected");
+				} else {//연결실패시
+					btnRequestConnect.setText("Failed Connect Retry");
+					btnRequestConnect.setEnabled(true);
+				}
+				//끝
 			}
-			
-			
-			//로그인화면 close
-			//this.setDefaultCloseOperation(HIDE_ON_CLOSE);
-			//this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-			//this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-			
-			
 		}
-		
 	}
 	private void callChatClient(Socket resSocket) {
 		String id = fldUserID.getText().trim();
-		new Client(resSocket,id);
+		new Client(resSocket,id,clientLogin);
+		//로그인화면닫기 보이지않게 하는것이군
+		setVisible(false);
 	}
 	
 	private Socket clientSocket(String ip , int port) {
@@ -141,11 +165,15 @@ public class ClientLogin extends JFrame implements ActionListener {
 			socket = new Socket( ip, port);
 			
 		} catch (UnknownHostException e) {
-			
-			e.printStackTrace();
+
+			setMessage(JOptionPane.WARNING_MESSAGE,
+					"경고","연결실패");
+
 		} catch (IOException e) {
-			
-			e.printStackTrace();
+
+			setMessage(JOptionPane.WARNING_MESSAGE,
+					"경고","연결실패");
+
 		}finally {
 			return socket;
 		}
@@ -159,8 +187,9 @@ public class ClientLogin extends JFrame implements ActionListener {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					new ClientLogin();
+					clientLogin =  new ClientLogin();
 				} catch (Exception e) {
+
 					e.printStackTrace();
 				}
 			}
@@ -169,5 +198,5 @@ public class ClientLogin extends JFrame implements ActionListener {
 
 
 
-	
+
 }

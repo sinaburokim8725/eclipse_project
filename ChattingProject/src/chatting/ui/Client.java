@@ -3,22 +3,23 @@ package chatting.ui;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.plaf.metal.MetalIconFactory;
 
+import com.sun.xml.internal.ws.api.message.ExceptionHasMessage;
 import org.omg.CORBA.ObjectHolder;
 
 import chatting.ui.Server.UserInfo;
 import compont.jlist.IconListRenderer;
 
-import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -30,24 +31,13 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.Vector;
 
-import javax.swing.JList;
-import javax.swing.JOptionPane;
 import javax.imageio.ImageIO;
-import javax.swing.BorderFactory;
-import javax.swing.DefaultListModel;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.SwingConstants;
-import javax.swing.JTextArea;
-import javax.swing.JScrollPane;
-import javax.swing.JTextField;
-import javax.swing.ListSelectionModel;
 
 import java.awt.Color;
 //ListSelectionListener
-public class Client extends JFrame implements ActionListener,ListSelectionListener{
-	
+public class Client extends JFrame implements ActionListener,ListSelectionListener, KeyListener {
+
+	private ClientLogin clientLogin;
 	private JPanel contentPane;
 	//전송메세지
 	private JTextField fldMessage;
@@ -109,11 +99,13 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 	private static String NEW_USER = "NEW_USER";
 	private static String OLD_USER = "OLD_USER";
 	
-	//기타설정
+	//구분자와 함께 문자열 분리한다.
 	StringTokenizer st;
 
 	//내가 참여한 방이름
 	private String myRoom;
+
+	private JOptionPane pane;
 	//끝
 	 
 	public Client() {
@@ -130,9 +122,11 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 		**/
 	}
 	
-	public Client(Socket resSocket,String id) {
+	public Client(Socket resSocket,String id,ClientLogin clientLogin) {
 		this.resSocket = resSocket;
 		this.id = id;
+		//로그인화면을 다시 부를 필요가 있을때 사용하기위한것
+		this.clientLogin = clientLogin;
 		//this.test = "나" + this.id; 
 		vcCCUList  = new Vector();
 		
@@ -151,7 +145,18 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 			}
 		});
 	}
-	
+
+	private void showLogin() {
+
+		clientLogin.setVisible(true);
+		clientLogin.btnRequestConnect.setEnabled(true);
+		clientLogin.btnRequestConnect.setText("접 속 요 청");
+		//this.setVisible(false);
+		dispose();
+
+		//System.exit(0); //로그인화면도 꺼진다.
+
+	}
 	private void connection() {
 		if(resSocket != null) {
 			
@@ -185,8 +190,11 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 				public void run() {
 					//서버메시지 수신 대기(언제올지 모르니 무한대기한다.
 					while (true) {
-						reciveMessage();
-						
+
+						if (reciveMessage()) {
+							break;
+						}
+
 					}
 				}
 			});//th
@@ -205,15 +213,28 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 			//dos.flush();
 			
 		} catch (IOException e) {
-			
+			/**
+			JOptionPane.showMessageDialog(null,
+					"IOException",
+					"경고",
+					JOptionPane.WARNING_MESSAGE);
+			**/
+			 setMessage(JOptionPane.WARNING_MESSAGE,
+					"경고",
+					"통신장애로 메시지 전송을 할 수 없습니다." + id);
+
 			e.printStackTrace();
 		}
 		
 	}
 	//수신 메시지
-	private void reciveMessage() {
-		
+	private boolean reciveMessage() {
+
+		//서버와 연결이 끊어졌을 경우 반복문 탈출코드.
+		boolean exitCode = false;
+
 		try {
+
 			//서버메시지 수신할 상태 만듬
 			is = resSocket.getInputStream();
 			dis= new DataInputStream(is);
@@ -230,8 +251,11 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 			 * 개선사항 : 1.향후 서버의 송신 메시지에 따라 분류해서 처리할 필요있음.
 			 * 기능별분리  1.전체접속자 목록출력  2.수신한 쪽지 내용 출력 
 			 */
+
 			if(msg != null) {
 				System.out.println("헤드문자 수신 Client>> " + msg.split(";")[0]);
+
+				head = msg.split(";")[0];
 				
 				if(msg.split(";")[0].equals("NEW_USER") || msg.split(";")[0].equals(OLD_USER)) {//접속자목록 출력작업
 
@@ -248,6 +272,7 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 					setRoomList(msg);
 
 				} else if (msg.split(";")[0].equals("CREATE_ROOM")) {//방개설
+					//수신정보 : CREATE_ROOM;방이름
 					if (msg.split(";").length >= 2) {
 
 						if (msg.split(";")[1].equals("HEAD_FAIL")) {
@@ -279,18 +304,18 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 							areTalkPart.append("관리자 > " + id + "님께서 만드신 " + myRoom + "으로 이동했습니다." + "\n");
 							areTalkPart.append("관리자 > " + "비매너 채팅인원에게는 방장으로써 퇴장조치 할 수있는 권한이 있습니다." + "\n");
 
-
-
 						}
-
 					}
 				} else if (msg.split(";")[0].equals("CHAT")) {//채팅글일경우
 					//수신형식 => CHAT;입장한방;전송자;전송내용
 					String id = msg.split(";")[2];
 					String m  = msg.split(";")[3];
 					areTalkPart.append(id + " > " + m + "\n");
-					//채팅글 필드 전송메시지 삭제
-					fldMessage.setText("");
+					//채팅글 필드 전송메시지 삭제(전송자 컴포넌트의 내용만 삭제
+					if (this.id.equals(id)) {
+						fldMessage.setText("");
+					}
+
 
 
 				} else if (msg.split(";")[0].equals("USER_LIST_UPDATE")) {//추가 fix00001
@@ -340,20 +365,44 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 					//채팅필드 세팅
 					areTalkPart.setText("");
 					areTalkPart.append("관리자 > " + id + "님은 " + myRoom + "채팅방으로 이동하셨습니다.\n");
-				}
-				
-			}
+
+				}else if (head.equals("USER_OUT")) {//접속종료인경우
+					//수신형식 : USER_OUT;접속끊긴유저
+					System.out.println(" >> Client > "+ msg);
+					vcCCUList.remove(msg.split(";")[1]);
+			    }
+			}//end if
 			//끝
-			
-			
 			//수정:텍스트 영역에 뿌려줌
 			//areTalkPart.append("관리자  > " + body + "님 접속을 환영합니다.!!♡" + "\n");
 			
-		} catch (IOException e) {
-			
-			e.printStackTrace();
+		} catch (Exception e) {
+			/**
+			JOptionPane.showMessageDialog(null,
+					"통신장애 서버접속 대기중... > " + id,
+					"경고",
+					JOptionPane.WARNING_MESSAGE);
+			**/
+			setMessage(JOptionPane.WARNING_MESSAGE,"경고",
+					"통신장애 서버접속 대기중... > " + id);
+			//본화면은 없어지고 로그인화면으로 이동한다.
+			showLogin();
+
+			try {
+				os.close();
+				is.close();
+				dos.close();
+				dis.close();
+				resSocket.close();
+				//System.out.println("에러테스트");
+			} catch (Exception e1) {
+				e1.printStackTrace();
+			}finally {
+				exitCode = true;
+			}
+		}finally {
+			return exitCode;
 		}
-		
 	}
 
 	/**
@@ -454,10 +503,28 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 		}//if
 	}
 	**/
-	
-	
+
+	/**
+	 *
+	 * @param msgType
+	 * @param title
+	 * @param msg
+	 */
+	private void setMessage(int msgType, String title, String msg) {
+		pane.setMessage(msg);
+		pane.setMessageType(msgType);
+		//pane.setOptionType(JOptionPane.YES_NO_CANCEL_OPTION);
+
+		JDialog dialog = pane.createDialog(null, title);
+		//false : 모달리스 창  ture : 모달창
+		dialog.setModal(false);
+		dialog.setVisible(true);
+	}
+	//
  	private void init() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+ 		//모달리스 예외상항발생시 메시지 창.
+		pane = new JOptionPane();
+ 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 702, 639);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -581,6 +648,9 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 		//리스트 아이템 선택이벤트 등록
 		lstAllContactPerson.addListSelectionListener(this);
 		lstChatRoomList.addListSelectionListener(this);
+
+		//텍스트 필드 키 이벤트 잡기
+		fldMessage.addKeyListener(this);
 	}
 	//버튼클릭이벤트
 	@Override
@@ -611,7 +681,7 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 			//채팅방 만들기 다이얼로그 박스띄우기
 			String roomName = JOptionPane.showInputDialog("채팅방 이름");
 			if (roomName != null) {
-				//헤드정보:CREATE_ROOM
+				//헤드정보:CREATE_ROOM;방이름
 				sendMessage("CREATE_ROOM" + ";" + roomName);
 			}
 			
@@ -656,9 +726,41 @@ public class Client extends JFrame implements ActionListener,ListSelectionListen
 		}
 
 	}
-	
-	
-	
+
+	@Override
+	public void keyTyped(KeyEvent e) {
+
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {
+		System.out.println("keycode > " + e.getKeyCode());
+
+		switch (e.getKeyCode()) {
+			case 10:
+				//서버전송
+				String message = fldMessage.getText();
+				//System.out.println(message);
+				//전송규칙 CHAT;입장한방;전송자;전송내용
+				System.out.println("채팅글 >" + "CHAT" + ";" + myRoom + ";"+ id + ";" + message);
+
+				sendMessage("CHAT" + ";" + myRoom + ";"+ id + ";" + message);
+
+
+
+				//수신메시지 메시지창 출력
+				//areTalkPart.append("전송자 > " + message + "\n");
+				break;
+				default:
+		}
+	}
+
+
 	//====================================================
 	/**
 	 * Launch the application.

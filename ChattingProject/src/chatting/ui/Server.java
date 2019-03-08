@@ -27,28 +27,18 @@ package chatting.ui;
  *이클립스에서 수정함
  * 인테리 j에서 수정함.
  */
-import sun.rmi.server.UnicastServerRef;
+
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Vector;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
+import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JTextArea;
-import javax.swing.JScrollPane;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JButton;
 
 public class Server extends JFrame implements ActionListener{
 
@@ -75,7 +65,11 @@ public class Server extends JFrame implements ActionListener{
 	
 	private Vector vcUserList;
 	private Vector vcRoomList;
-	
+
+	//예외발생시 메시지 창.
+    private JOptionPane pane;
+
+
 	public Server() {
 		vcUserList = new Vector();
 		vcRoomList = new Vector();
@@ -84,9 +78,27 @@ public class Server extends JFrame implements ActionListener{
 		//이벤트 등록
 		start();	
 	}
-	
+
+    /**
+     *
+     * @param msgType
+     * @param title
+     * @param msg
+     */
+    private void setMessage(int msgType, String title, String msg) {
+        pane.setMessage(msg);
+        pane.setMessageType(msgType);
+        //pane.setOptionType(JOptionPane.YES_NO_CANCEL_OPTION);
+
+        JDialog dialog = pane.createDialog(null, title);
+        //false : 모달리스 창  ture : 모달창
+        dialog.setModal(false);
+        dialog.setVisible(true);
+    }
 	private void init() {
-		
+		//예외발생 통보 메시지창
+        pane = new JOptionPane();
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 371, 506);
 		contentPane = new JPanel();
@@ -100,6 +112,8 @@ public class Server extends JFrame implements ActionListener{
 		
 		areMessage = new JTextArea();
 		scrollPane.setViewportView(areMessage);
+		areMessage.setEnabled(false);
+		areMessage.setDisabledTextColor(Color.blue);
 		
 		JLabel label = new JLabel("포토번호");
 		label.setBounds(12, 379, 55, 27);
@@ -139,23 +153,58 @@ public class Server extends JFrame implements ActionListener{
 				runServerSocket(port);
 				
 			} catch (IOException e1) {
+                /**
+				JOptionPane.showMessageDialog(null,
+						"이미 포트가 열려있습니다.\n" + "PORT 번호 > " + port,
+						"경고",
+						JOptionPane.WARNING_MESSAGE);
+                **/
+                setMessage(JOptionPane.WARNING_MESSAGE, "경고",
+                        "이미 포트가 열려있습니다.\n" + "PORT 번호 > " + port);
 				
 				e1.printStackTrace();
 			} finally {
 				
 				if(serverSocket != null) {
+					//포트필드 수정금지
+					fldPort.setEnabled(false);
+					fldPort.setDisabledTextColor(Color.red);
+					//서버실행버튼 enable 속성 false
 					btnServerRun.setEnabled(false);
+					//서버중지버튼 enable 속성 true
 					btnServerStop.setEnabled(true);
 				}
 			}
 		} else if(e.getSource() == btnServerStop) {//서버중지
 			System.out.println("서버중지");
-			
-			btnServerStop.setEnabled(false);
-			//btnServerRun.setEnabled(true);
+
+			try {
+				//접속된 사용자 전원 끊기
+				closeUserSocket();
+				//소켓을 닫음 (이후 접속할수 없어나 이전에 접속한 유저는 접속상태유지).
+				serverSocket.close();
+				vcUserList.removeAllElements();
+				vcRoomList.removeAllElements();
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}finally {
+				//화면내의 컴포넌트 속성변경
+				fldPort.setEnabled(true);
+				fldPort.setDisabledTextColor(Color.black);
+				btnServerStop.setEnabled(false);
+				btnServerRun.setEnabled(true);
+			}
 		}
 	}
-	
+
+	/**
+	 * 접속유저 연결끊기
+	 */
+	private void closeUserSocket() throws IOException {
+		for (int i = 0; i < vcUserList.size(); i++) {
+			((UserInfo)vcUserList.elementAt(i)).getUserSocket().close();
+		}
+	}
 	//소켓연결
 	private void runServerSocket(int port) throws IOException{
 		//매개변수:포트번호
@@ -195,8 +244,20 @@ public class Server extends JFrame implements ActionListener{
 						
 						//communMessage();
 					} catch (IOException e) {
-						
+						/**
+					    JOptionPane.showMessageDialog(null,
+								"Accept Error 발생",
+								"에러",
+								JOptionPane.ERROR_MESSAGE);
+						**/
+                        setMessage(JOptionPane.ERROR_MESSAGE, "에러",
+                                "Accept Error");
+
+                        areMessage.append("서버포트닫힘... \n");
+
+
 						e.printStackTrace();
+						break;
 					}
 					
 				}
@@ -248,13 +309,15 @@ public class Server extends JFrame implements ActionListener{
 			
 			this.userSocket = userSocket;
 			
-			netConfig();
+			stremConfig();
 			
 		}
 		
-		private void netConfig( ) {
+		private void stremConfig( ) {
 			try {
+
 				is = userSocket.getInputStream();
+				//ObjectInputStream ois = new ObjectInputStream(is);
 				dis= new DataInputStream(is);
 				os = userSocket.getOutputStream();
 				dos= new DataOutputStream(os);
@@ -274,12 +337,13 @@ public class Server extends JFrame implements ActionListener{
 					//System.out.println("기존접속자: "+ u.getNickName() + "\n");
 					sendMessage(OLD_USER + ";" + u.getNickName().trim());
 					
-				}
-				
-				//noticeUserList();
+				}//noticeUserList();
+
+
 				
 				//추가 2018.3.4 : 기존접속자에게 자신의 접속을 알려준후 자신도 기존접속자 목록에 추가한다.
 				vcUserList.add(this);
+				//클라이언트 화면 리스트 갱신 요청;
 				brodCast("USER_LIST_UPDATE;");
 
 				//추가 2019.3.6 : 채팅방 목록을 송신한다.
@@ -291,7 +355,16 @@ public class Server extends JFrame implements ActionListener{
 				sendMessage("ROOM_LIST_UPDATE");
 
 			} catch (IOException e) {
-				
+				/**
+			    JOptionPane.showMessageDialog(null,
+						"stream 설정 에러",
+						"에러",
+						JOptionPane.ERROR_MESSAGE);
+                **/
+
+                setMessage(JOptionPane.ERROR_MESSAGE, "에러",
+                        "Stream Config Error");
+
 				e.printStackTrace();
 			}
 			
@@ -353,14 +426,18 @@ public class Server extends JFrame implements ActionListener{
 			
 			while(true) {//클라이언트메시지 수신 무한대기
 				
-				reciveMessage();
+				if (reciveMessage()) {
+					break;
+				}
 			}
 			
 		}
 		
-		private void reciveMessage() {
+		private boolean reciveMessage() {
+			//에러발생시 반복문 탈출코드
+			boolean exitCode = false;
+
 			try {
-				
 				
 				String msg = "";
 				//msg 접속한 사용자로부터 수신한 메시지
@@ -424,8 +501,10 @@ public class Server extends JFrame implements ActionListener{
 							if (rInfo.getRoomName().equals(jRoom)) {
 								//id 입장하기 보내기
 								for (int j = 0; j < rInfo.getVcRoomUserList().size(); j++) {
-									UserInfo u = (UserInfo) rInfo.getVcRoomUserList().elementAt(i);
+									//19.3.7 수정: i 를 j로 수정 항상주의할것
+								    UserInfo u = (UserInfo) rInfo.getVcRoomUserList().elementAt(j);
 									//참여구성원들에게 보내는 송신형식 : JOIN_NEW_USER;신규입장인원
+                                    System.out.println("채팅방 참여인원 > " + u.getNickName());
 									u.sendMessage("JOIN_NEW_USER" + ";" + uId);
 									//채팅방 참여시 클라이언트 화면설정 정보
 									//채팅방 참여인원
@@ -433,7 +512,7 @@ public class Server extends JFrame implements ActionListener{
 
 								}
 								//찾은 방에 사용자 정보를 등록한다
-								rInfo.getVcRoomUserList().add(this);
+                                rInfo.setVcRoomUserList(this);
 
 								//방참여인원 채팅방 초기화면 설정용 정보 송신
 								//참여한 자신의 화면에 보내는 송신형식:
@@ -454,8 +533,57 @@ public class Server extends JFrame implements ActionListener{
 				}
 				
 			} catch (IOException e) {
-				
-				e.printStackTrace();
+				//클라이언트 접속이 예고 없이 끊어졌을경우:
+				try {
+					/**
+				    JOptionPane.showMessageDialog(null,
+							"통신장애 사용자 접속끊김",
+							"알림",
+							JOptionPane.INFORMATION_MESSAGE);
+                     **/
+                    setMessage(JOptionPane.ERROR_MESSAGE, "에러",
+                            "통신장애 "+getNickName()+"님 비정상 접속종료!\n");
+
+                    //TextArea에 통보
+					areMessage.append(getNickName()+ "님 비정상 접속종료!\n");
+					dos.close();
+					dis.close();
+					is.close();
+					os.close();
+					userSocket.close();
+
+
+				} catch (Exception e1) {
+					e.printStackTrace();
+				}finally {
+					/**
+					 * 접속이 끊김으로 해야할일
+					 * 1.접속자 명단에서 삭제
+					 * 2.전체접속자에게 통보
+					 * 3.만일 채팅중이었다면
+					 *   3.1 채팅방 참연인원중 한명이라면
+					 *   채팅방 참여 명단에서 삭제
+					 *   채팅방 참여 인원에게 삭제통보(님이 퇴장했습니다.)
+					 *   3.2 방장이었고 참여인원이 있을경우
+					 *   임의 방장위임(첫번째 멤버에게 ) 방장권한 자동위임.
+					 *   명단에서 삭제
+					 *   채팅인원에게 통보
+					 *   방장권한 위임정보 통보.
+					 *   3.3 방에 혼자일경우 방삭제
+					 */
+					vcUserList.remove(this);
+					//송신형식 USER_OUT;접속끊긴유저
+                    System.out.println("Server >> "+ "USER_OUT" + ";" + getNickName());
+					brodCast("USER_OUT" + ";" + getNickName());
+					brodCast("USER_LIST_UPDATE");
+
+					exitCode = true;
+				}
+				//e.printStackTrace();
+
+			}finally {
+
+				return exitCode;
 			}
 		}
 		//클라이언트의 다양한 요청은 헤드로 구분해서 헤드별 지침에 따라 작업한다.
@@ -468,7 +596,9 @@ public class Server extends JFrame implements ActionListener{
 		 * @param msg
 		 */
 		private void createRoom(String msg) {
-			String roomName = null;
+            //수신정보:CREATE_ROOM;방이름
+            System.out.println("채팅방 만들기 Server createRoom(ms) 수신정보:CREATE_ROOM;방이름");
+		    String roomName = null;
 			if (msg.split(";").length >= 2) {
 				roomName = msg.split(";")[1];
 
@@ -572,6 +702,9 @@ public class Server extends JFrame implements ActionListener{
 			this.roomList = roomList;
 		}
 
+		public Socket getUserSocket() {
+			return userSocket;
+		}
 		//===========================
 	}//end class UserInfo
 

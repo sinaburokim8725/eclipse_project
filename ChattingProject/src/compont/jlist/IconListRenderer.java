@@ -1,8 +1,12 @@
 package compont.jlist;
 
+import java.net.*;
 import java.awt.Component;
 import java.util.HashMap;
 import java.util.Map;
+import java.net.* ;
+
+
 import javax.swing.DefaultListCellRenderer;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -41,9 +45,12 @@ public class IconListRenderer extends DefaultListCellRenderer {
 		// setup mappings for which icon to use for each value
 
 		//getClass().getResource(path)
-		//String path = "resource/image/pig.png";
+		//String path = "/resource/image/pig.png";
 
 		//image = new ImageIcon(IconListRenderer.class.getClass().getResource("path"));
+
+		// URL imageURL = IconListRenderer.class.getClassLoader().getResource("pig.png");
+		//ImageIcon img = new ImageIcon(imageURL);
 
 
 		Map<Object, Icon> icons = new HashMap<Object, Icon>();
@@ -51,9 +58,16 @@ public class IconListRenderer extends DefaultListCellRenderer {
 		icons.put("folder",  MetalIconFactory.getTreeFolderIcon());
 		icons.put("computer",MetalIconFactory.getTreeComputerIcon());
 
-		icons.put("pig", new ImageIcon("pig.png"));
+		//소스패키지 내에 images 폴더를 만든다.
+		String path = "/images/pig.png";
+		ImageIcon img = new ImageIcon(IconListRenderer.class.getClass().getResource(path));
+
+		icons.put("pig", img);
+
+		//icons.put("pig", new ImageIcon("resurce/image/pig.png"));
 		
-		JFrame frame = new JFrame("resource/image/pig.pngIcon List");
+		
+		JFrame frame = new JFrame("이미지:타이틀");
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		
 		// create a list with some test data
