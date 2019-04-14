@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="AddressBookApp.jnlp">
+  <information>
+    <title>AddressBookApp</title>
+    <vendor>familly.org</vendor>
+    <description>AddressBookApp</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="AddressBookApp.jar" size="383478" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="org.familly.fx.adressbook.first.MainApp"  name="AddressBookApp" />
+  <update check="background"/>
+</jnlp>
