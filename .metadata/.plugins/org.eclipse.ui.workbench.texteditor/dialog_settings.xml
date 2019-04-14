@@ -2,12 +2,15 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="lstChatRoomList" key="selection"/>
+		<item value="fx:application" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="fx:application"/>
+			<item value="fx:resources"/>
+			<item value="path"/>
 			<item value="lstChatRoomList"/>
 			<item value="NEW_USER"/>
 			<item value="vcOldList"/>
@@ -20,9 +23,6 @@
 			<item value="vcCCUList"/>
 			<item value="OLD_USER"/>
 			<item value="getNickName"/>
-			<item value="접속자목록"/>
-			<item value="test"/>
-			<item value="setPreparMessage"/>
 		</list>
 		<list key="replacehistory">
 			<item value=";"/>

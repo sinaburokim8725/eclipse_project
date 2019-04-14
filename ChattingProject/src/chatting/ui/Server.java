@@ -706,7 +706,7 @@ public class Server extends JFrame implements ActionListener{
 			return userSocket;
 		}
 		//===========================
-	}//end class UserInfo
+	}//end class User
 
 
 	//////////////////////////////////

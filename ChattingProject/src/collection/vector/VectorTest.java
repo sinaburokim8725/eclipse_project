@@ -1,12 +1,12 @@
 package collection.vector;
 
-import common.info.UserInfo;
+import common.info.User;
 
 import java.util.Vector;
 
 public class VectorTest {
     private Vector vc;
-    private UserInfo info;
+    private User info;
 
     public VectorTest() {
         init();
@@ -19,9 +19,9 @@ public class VectorTest {
         System.out.println("용량 >" + vc.capacity());
 
         for (int i = 0; i < 4; i++) {
-            info = new UserInfo();
+            info = new User();
             info.setName("USER" + i);
-            info.setNickName("딸랑이" + i);
+            //info.setNickName("딸랑이" + i);
             info.setAge(i + 30);
             vc.addElement(info);
         }
@@ -29,7 +29,7 @@ public class VectorTest {
         //추가 후의 사이즈랑 용량크기
         System.out.println("사이즈 > " + vc.size());
         System.out.println("용량 >" + vc.capacity());
-        System.out.println("첫벗째요소 > " + ((UserInfo)vc.elementAt(0)).getName());
+        System.out.println("첫벗째요소 > " + ((User)vc.elementAt(0)).getName());
 
         //요소 추가
         vc.add("사랑이");

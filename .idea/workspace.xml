@@ -2,55 +2,218 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bfa1716-0095-49e7-a8e8-1fdf0bdd7fb6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ChattingProject/src/common/info/util/string/Split.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChattingProject/src/common/swing/ui/Dialog01.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChattingProject/src/common/swing/ui/DialogTest.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ChattingProject/src/common/swing/ui/DialogTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChattingProject/src/generic/Box.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChattingProject/src/lambda/Compare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChattingProject/src/lambda/CompareExam01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChattingProject/src/lambda/Lambda01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChattingProject/src/lambda/Lambda02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChattingProject/src/lambda/Lambda03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChattingProject/src/lambda/Lambda04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ChattingProject/src/org/familly/network/stream/ObjectInOutStream01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/javaFX/FirstFX/src/sample/sample.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/resources/images/address_book_32.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/ArraysAsList01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/ArraysBinarySearch01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/ArraysCopyOfRange01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/SystemArrayCopy01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/BirthdayStatisticsController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/PersonEditDialogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/PersonOverviewController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/RootLayoutController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/PersonListWrapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/util/DateUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/util/LocalDateAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/BirthdayStatistics.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/PersonEditDialog.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/PersonOverview.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/RootLayout.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/css/DarkTheme.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/helloworld/HelloWorld.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/helloworld/HelloWorld.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/helloworld/HelloWorldController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/fx/helloworld/HelloWorldMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/util/LocalDateDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java_project/src/org/familly/util/TimezoneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/3/500d55af8c3a001917c7c37a29ddd37f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/3/50f871ca8c3a001917c7c37a29ddd37f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/33/b07b6882c33a00191bc0fb01a436f084" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/45/d06f35dd8c3a001917c7c37a29ddd37f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/8c/c0c4dc9b8c3a001917c7c37a29ddd37f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/a/3081f688c73a00191bc0fb01a436f084" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/bb/5095cd57c53a00191bc0fb01a436f084" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/be/900a41aabd3a00191bc0fb01a436f084" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/ca/60c894da2e3f00191c3f94db82d22ed1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/d3/108d9adba33a00191ab59504292b0e68" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/ec/60f795d98b3a001917c7c37a29ddd37f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/ed/802539e8bd3a00191bc0fb01a436f084" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/ee/20d37fd9923a00191ab59504292b0e68" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/f1/902cfc2b8c3a001917c7c37a29ddd37f" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/af/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/af/history.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/e4/46/94/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/e4/46/94/history.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/e4/46/bd/94/history.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/e4/6/8/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/e4/6/8/history.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/14/20da470d963e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/16/f07ae5f3963e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/17/40f541a00e3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/18/d0e078c7a33e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/25/200c5072d53c00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/27/0029dbdaa63e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/2a/c0a2326f863e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/2a/f08036f12d3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/2d/a0653b8fc13c00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/30/509503f1153e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/32/20842b271d3d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/35/30a9d2d9233e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/36/401b7f730f3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/37/5011878aae3e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/38/10ae9316003e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/3d/a0ffbdd2003e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/3f/a074181f2f3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/40/a0eefbda2e3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/41/40b333dd8b3e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/44/009706f02e3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/44/3082bbd7953e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/47/00bd7792133f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/4c/803a24e3323e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/4d/30079783113e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/4e/5014772d1f3d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/4f/30ffa27a023e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/56/c02c23a17a3e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/57/808de4cd343e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/57/80de766f143e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/59/5065e1bc103d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/59/d04260bdcf3c00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/5d/306de5a3ce3d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/5f/a0cc8f342e3d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/5f/f01d74460e3e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/64/70577a958b3e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/68/909be864123e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/6a/308119d5133e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/6a/409066b3a53e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/6c/007d8355e03d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/6d/b07f6f72013e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/6e/60fac03d0e3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/6f/209196ee0e3e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/6f/402e1896003e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/71/8073581e803e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/75/d028cb5e273e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/77/c039e6ff103d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/78/0083ebc2ff3d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/80/c09f0fd9013e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/82/f01eed1c183e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/87/209ac3de1f3e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/8d/60e445848b3e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/8f/10f204e81e3e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/8f/60929f6fa73e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/9/b0367a7aa03e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/93/b0aba6822d3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/97/b0fa3dc7a33e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/98/40d76842003e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/a/20c57ca7183e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/a/7028705fd43c00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/a2/503d6772383e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/a8/2018888f083f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/a9/90918ff37c3e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/a9/a0174e5dd83d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/aa/30d1da0a273e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/ac/c026ee84953e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/ac/f03531ca963e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/ad/e06ed113023e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/b2/0057b2b8d33d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/b3/30ca23702e3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/b6/d0e41ba9893e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/b8/208e56e8163e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/b9/b01655710c3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/ba/608a5571e43d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/c/50091c74243e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/c/9078a4b7173e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/c0/10a8f9e2323e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/c3/b084056e973e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/c4/50184acecf3c00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/c5/30ef45358c3e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/c6/70c08d460e3e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/ca/009456f1283d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/cb/20044c8aae3e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/cc/a0fbafd00a3e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/ce/60106922993e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/cf/408f5174873e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/d/0039df72233e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/d/808efcb3803e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/d6/80dbac508c3e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/d9/b0340c57343e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/da/40fc1773233e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/dc/2056bbe5a03e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/dc/b00042d5273e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/df/607dad97863e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/e2/90ae70269c3e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/e2/e001a336023e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/e3/60618a20013e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/e4/403b0632913e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/e4/40ddf541183e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/e4/e0bbf61c183e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/e5/80da67be0e3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/e8/40706d080f3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/f/7011f264123e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/f0/d0bd4a102e3f00191c3f94db82d22ed1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/f2/107a52321e3d00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/f4/10dff5a40b3e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/f4/b00a8c83113e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/f8/301c6508a93e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/f9/202721d70a3e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/fd/a00cb5a0013e00191021835579344db0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/fd/d0839b139c3e00191bb4e3b8f279c3a4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.history/fe/60abdc78343e001912a9897597d7edc7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/af/history.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/e4/46/94/history.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/e4/5b/history.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/e4/6/8/history.index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.markers" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.markers" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/org.eclipse.jdt.core/state.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/org.eclipse.jdt.core/state.dat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/.indexes/af/history.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/.indexes/e4/2e/history.index" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/.indexes/e4/3f/history.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/.indexes/e4/3f/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/.indexes/e4/3f/properties.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/.indexes/e4/4/history.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/org.eclipse.jdt.core/state.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/16.tree" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/.indexes/e4/3f/properties.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/.markers" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/org.eclipse.jdt.core/state.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/org.eclipse.jdt.core/state.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.browser.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.browser.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wb.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wb.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.sse.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.sse.ui.prefs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.ui.workbench.swt/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.ui.workbench.swt/dialog_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1106086747.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1106086747.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1125098209.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1125098209.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1184585541.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1509358625.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1698103914.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/1926279211.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/2387563968.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/2438251567.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/2623092863.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/2813417059.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/2904999506.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/295609374.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/3056964722.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/3660875320.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/3958282931.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/4211365586.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/466384327.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/509267544.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/ChattingProject/2019/3/10/refactorings.history" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/ChattingProject/2019/3/10/refactorings.history" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/ChattingProject/2019/3/10/refactorings.index" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/ChattingProject/2019/3/10/refactorings.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments.gen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments_3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments.gen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments_3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/cbfb4f8606e0a1dc1e1bb77542f8f15e/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/cbfb4f8606e0a1dc1e1bb77542f8f15e/segments.gen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.core/nexus/cbfb4f8606e0a1dc1e1bb77542f8f15e/segments_3" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.pde.core/SavedExternalPluginList.txt" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.pde.core/SavedExternalPluginList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench.texteditor/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench.texteditor/dialog_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChattingProject/ChattingProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/ChattingProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChattingProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChattingProject/bin/META-INF/ChattingProject.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ChattingProject/bin/chatting/ui/Client$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/chatting/ui/Client$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChattingProject/bin/chatting/ui/Client$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/chatting/ui/Client$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChattingProject/bin/chatting/ui/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/chatting/ui/Client.class" afterDir="false" />
@@ -62,20 +225,25 @@
       <change beforePath="$PROJECT_DIR$/ChattingProject/bin/chatting/ui/Server$UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/chatting/ui/Server$UserInfo.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChattingProject/bin/chatting/ui/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/chatting/ui/Server.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChattingProject/bin/collection/vector/VectorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/collection/vector/VectorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChattingProject/bin/common/info/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/common/info/UserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/IconListRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/IconListRenderer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/pig.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChattingProject/src/chatting/ui/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/src/chatting/ui/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChattingProject/src/chatting/ui/ClientLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/src/chatting/ui/ClientLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChattingProject/bin/common/info/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/FileList$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/FileList$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/FileList.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/FileList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/FileListCellRenderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/FileListCellRenderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/ImgsNText$Renderer.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/ImgsNText$Renderer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/ImgsNText.class" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/bin/compont/jlist/ImgsNText.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ChattingProject/src/chatting/ui/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/src/chatting/ui/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChattingProject/src/compont/jlist/IconListRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/src/compont/jlist/IconListRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ChattingProject/src/compont/jlist/pig.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/java_project/bin/java_project/HelloJaba.class" beforeDir="false" afterPath="$PROJECT_DIR$/java_project/bin/java_project/HelloJaba.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java_project/bin/java_project/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/java_project/bin/java_project/main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java_project/bin/network/Finger.class" beforeDir="false" afterPath="$PROJECT_DIR$/java_project/bin/network/Finger.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java_project/bin/winbuilder/FirstWindowBuilderProgram$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/java_project/bin/winbuilder/FirstWindowBuilderProgram$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java_project/bin/winbuilder/FirstWindowBuilderProgram.class" beforeDir="false" afterPath="$PROJECT_DIR$/java_project/bin/winbuilder/FirstWindowBuilderProgram.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChattingProject/src/collection/vector/VectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/src/collection/vector/VectorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ChattingProject/src/common/info/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/ChattingProject/src/common/info/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_project/bin/java_project/HelloJaba.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_project/bin/java_project/main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_project/bin/network/Finger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_project/bin/winbuilder/FirstWindowBuilderProgram$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_project/bin/winbuilder/FirstWindowBuilderProgram.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/java_project/java_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java_project/java_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_project/src/java_project/HelloJaba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_project/src/java_project/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_project/src/network/Finger.java" beforeDir="false" afterPath="$PROJECT_DIR$/java_project/src/org/familly/network/Finger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_project/src/winbuilder/FirstWindowBuilderProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/java_project/src/org/familly/winbuilder/FirstWindowBuilderProgram.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/ChattingProject/bin/" />
     <ignored path="$PROJECT_DIR$/java_project/bin/" />
@@ -88,63 +256,19 @@
   <component name="CompilerWorkspaceConfiguration">
     <option name="PARALLEL_COMPILATION" value="true" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="workspace" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChattingProject/src/chatting/ui/Server.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="188" column="30" selection-start-line="188" selection-start-column="30" selection-end-line="188" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#16749#16750#0" expanded="true" />
-                <element signature="e#16828#16829#0" expanded="true" />
-                <element signature="e#16885#16886#0" expanded="true" />
-                <element signature="e#16964#16965#0" expanded="true" />
-                <element signature="e#16714#16715#0" expanded="true" />
-                <element signature="e#16740#16741#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ChattingProject/src/chatting/ui/ClientLogin.java">
+        <entry file="file://$PROJECT_DIR$/AddressBookApp/src/org/familly/fx/adressbook/first/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="127" column="36" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
-              <folding>
-                <element signature="e#2768#2769#0" expanded="true" />
-                <element signature="e#2816#2817#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ChattingProject/src/chatting/ui/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="746" column="16" lean-forward="true" selection-start-line="746" selection-start-column="16" selection-end-line="746" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/java_project/src/winbuilder/DialogTest01.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
-              <folding>
-                <element signature="e#1167#1168#0" expanded="true" />
-                <element signature="e#1179#1180#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="264">
+              <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -154,23 +278,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package-info" />
+        <option value="Interface" />
+        <option value="JavaFXApplication" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>setmessage</find>
-      <find>showmess</find>
-      <find>채팅방리스트</find>
-      <find>setRoomList</find>
-      <find>sendMessage</find>
-      <find>init</find>
-      <find>IOException</find>
-      <find>`</find>
-      <find>showMessageDialog</find>
-      <find>recive</find>
-      <find>SerSocket</find>
       <find>UserInfo</find>
       <find>recivemessage</find>
       <find>are</find>
@@ -190,7 +307,22 @@
       <find>keytp</find>
       <find>actionper</find>
       <find>keyty</find>
+      <find>Object</find>
+      <find>b</find>
+      <find>rootLayout</find>
+      <find>xml</find>
+      <find>showpo</find>
+      <find>fx</find>
+      <find>initialize</find>
+      <find>fine</find>
+      <find>person</find>
+      <find>observablePersonList</find>
+      <find>getBir</find>
     </findStrings>
+    <replaceStrings>
+      <replace>T</replace>
+      <replace>info</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -198,19 +330,65 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ChattingProject/src/common/info/TestInfo.java" />
-        <option value="$PROJECT_DIR$/ChattingProject/src/collection/VectorTest.java" />
-        <option value="$PROJECT_DIR$/ChattingProject/src/collection/vector/VectorTest.java" />
-        <option value="$PROJECT_DIR$/ChattingProject/src/compont/jlist/IconListRenderer.java" />
         <option value="$PROJECT_DIR$/ChattingProject/src/common/info/util/string/Split.java" />
         <option value="$PROJECT_DIR$/ChattingProject/src/common/swing/ui/DialogTest.form" />
         <option value="$PROJECT_DIR$/ChattingProject/src/common/swing/ui/DialogTest.java" />
         <option value="$PROJECT_DIR$/ChattingProject/src/common/swing/ui/Dialog01.java" />
         <option value="$PROJECT_DIR$/java_project/src/winbuilder/DialogTest01.java" />
-        <option value="$PROJECT_DIR$/ChattingProject/src/chatting/ui/Server.java" />
         <option value="$PROJECT_DIR$/ChattingProject/src/chatting/ui/ClientLogin.java" />
+        <option value="$PROJECT_DIR$/ChattingProject/src/common/info/UserInfo.java" />
+        <option value="$PROJECT_DIR$/ChattingProject/src/common/info/User.java" />
+        <option value="$PROJECT_DIR$/ChattingProject/src/collection/vector/VectorTest.java" />
+        <option value="$PROJECT_DIR$/ChattingProject/src/network/stream/ObjectInOutStream01.java" />
+        <option value="$PROJECT_DIR$/ChattingProject/src/generic/Box.java" />
+        <option value="$PROJECT_DIR$/ChattingProject/src/lambda/Compare.java" />
+        <option value="$PROJECT_DIR$/ChattingProject/src/lambda/CompareExam01.java" />
+        <option value="$PROJECT_DIR$/ChattingProject/src/lambda/Lambda01.java" />
+        <option value="$PROJECT_DIR$/ChattingProject/src/lambda/Lambda02.java" />
+        <option value="$PROJECT_DIR$/ChattingProject/src/lambda/Lambda03.java" />
+        <option value="$PROJECT_DIR$/ChattingProject/src/lambda/Lambda04.java" />
+        <option value="$PROJECT_DIR$/java_project/src/java_project/main.java" />
+        <option value="$PROJECT_DIR$/java_project/src/util/TimezoneTest.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/util/TimezoneTest.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/network/Finger.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/ArrayCopy01.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/ArraysCopyOfRange01.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/HelloWorld.css" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/HelloWorldMain.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/HelloWorldController.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/HelloWorld.fxml" />
         <option value="$PROJECT_DIR$/ChattingProject/src/chatting/ui/Client.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/ArraysAsList01.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/SystemArrayCopy01.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/ArraysBinarySearch01.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/RootLayout.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/PersonOverview.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/util/DataUtil.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/util/LocalDateDemo.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/util/LocalDateDemo.java" />
+        <option value="$PROJECT_DIR$/ChattingProject/src/chatting/ui/Server.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/PersonEditDialogController.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/PersonOverviewController.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/css/DarkTheme.css" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/PersonOverview.fxml" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/PersonEditDialog.fxml" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/PersonListWrapper.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/util/LocalDateAdapter.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/util/DateUtil.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/BirthdayStatistics.fxml" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/RootLayoutController.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/RootLayout.fxml" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/BirthdayStatisticsController.java" />
+        <option value="$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/MainApp.java" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
@@ -219,255 +397,178 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-11" />
     <option name="width" value="977" />
     <option name="height" value="791" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>Android</id>
+          </State>
+          <State>
+            <id>Class metricsJava</id>
+          </State>
+          <State>
+            <id>Class structureJava</id>
+          </State>
+          <State>
+            <id>Code style issuesJava</id>
+          </State>
+          <State>
+            <id>Control flow issuesJava</id>
+          </State>
+          <State>
+            <id>CorrectnessLintAndroid</id>
+          </State>
+          <State>
+            <id>Declaration redundancyJava</id>
+          </State>
+          <State>
+            <id>EncapsulationJava</id>
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+          <State>
+            <id>Groovy</id>
+          </State>
+          <State>
+            <id>Inheritance issuesJava</id>
+          </State>
+          <State>
+            <id>InternationalizationJava</id>
+          </State>
+          <State>
+            <id>InternationalizationLintAndroid</id>
+          </State>
+          <State>
+            <id>J2ME issuesJava</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Java 5Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>Java interop issuesKotlin</id>
+          </State>
+          <State>
+            <id>Java language level migration aidsJava</id>
+          </State>
+          <State>
+            <id>JavadocJava</id>
+          </State>
+          <State>
+            <id>Kotlin</id>
+          </State>
+          <State>
+            <id>LintAndroid</id>
+          </State>
+          <State>
+            <id>LintLintAndroid</id>
+          </State>
+          <State>
+            <id>MemoryJava</id>
+          </State>
+          <State>
+            <id>MessagesCorrectnessLintAndroid</id>
+          </State>
+          <State>
+            <id>Method metricsJava</id>
+          </State>
+          <State>
+            <id>Numeric issuesJava</id>
+          </State>
+          <State>
+            <id>PerformanceJava</id>
+          </State>
+          <State>
+            <id>PerformanceLintAndroid</id>
+          </State>
+          <State>
+            <id>PortabilityJava</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsGroovy</id>
+          </State>
+          <State>
+            <id>Probable bugsJava</id>
+          </State>
+          <State>
+            <id>Resource managementJava</id>
+          </State>
+          <State>
+            <id>SecurityJava</id>
+          </State>
+          <State>
+            <id>SecurityLintAndroid</id>
+          </State>
+          <State>
+            <id>TestNGJava</id>
+          </State>
+          <State>
+            <id>Threading issuesGroovy</id>
+          </State>
+          <State>
+            <id>Threading issuesJava</id>
+          </State>
+          <State>
+            <id>UsabilityLintAndroid</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Android</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+    <navigator currentView="PackagesPane" proportions="" version="1">
       <autoscrollFromSource ProjectPane="true" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="workspace" type="58d84e3e:PackageViewProjectNode" />
-              <item name="ChattingProject" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Scope 'Default Changelist'; set:Default Changelist; class com.intellij.packageDependencies.ChangeListScope">
-          <expand>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="chatting" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="chatting" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="compont" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="compont" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="jlist" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Scope 'Changed Files'; set:Changed Files; ALL; class com.intellij.packageDependencies.ChangeListScope">
-          <expand>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="chatting" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="chatting" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="compont" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="compont" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="jlist" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
-          <expand>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="chatting" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="chatting" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="common" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="common" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="info" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="common" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="info" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="util" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="common" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="info" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="util" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="string" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="common" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="swing" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="ChattingProject" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="common" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="swing" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="ui" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="java_project" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="java_project" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="workspace" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="java_project" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="winbuilder" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChattingProject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChattingProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java_project" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java_project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="workspace" type="b2602c69:ProjectViewProjectNode" />
-              <item name="java_project" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="winbuilder" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="Current File" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="219" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552079854744" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554457708047" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.20682068" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="lambda" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\eclipse\workspace\java_project\resources" />
+      <recent name="D:\eclipse\workspace\java_project" />
+      <recent name="D:\eclipse\workspace\java_project\src" />
+      <recent name="D:\eclipse\workspace\java_project\src\org\familly\fx\helloworld" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\eclipse\workspace\java_project\resources\images" />
       <recent name="D:\eclipse\workspace\ChattingProject" />
       <recent name="D:\eclipse\workspace\ChattingProject\bin\image" />
       <recent name="D:\eclipse\workspace\ChattingProject\src\compont\jlist" />
@@ -486,13 +587,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ClientLogin">
-    <configuration name="ClientLogin" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="chatting.ui.ClientLogin" />
-      <module name="ChattingProject" />
+  <component name="RunManager" selected="Application.MainApp">
+    <configuration name="ArraysBinarySearch01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.familly.collection.arrays.ArraysBinarySearch01" />
+      <module name="java_project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="chatting.ui.*" />
+          <option name="PATTERN" value="org.familly.collection.arrays.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -500,12 +601,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DialogTest01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="winbuilder.DialogTest01" />
-      <module name="java_project" />
+    <configuration name="ClientLogin" type="Application" factoryName="Application" singleton="false" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="chatting.ui.ClientLogin" />
+      <module name="ChattingProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="winbuilder.*" />
+          <option name="PATTERN" value="chatting.ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -526,7 +627,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Server" type="Application" factoryName="Application" singleton="false" temporary="true" nameIsGenerated="true">
+    <configuration name="LocalDateDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.familly.util.LocalDateDemo" />
+      <module name="java_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.familly.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.familly.fx.adressbook.first.MainApp" />
+      <module name="java_project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.familly.fx.adressbook.first.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Server" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="chatting.ui.Server" />
       <module name="ChattingProject" />
       <extension name="coverage">
@@ -539,37 +666,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Split" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="common.info.util.string.Split" />
-      <module name="ChattingProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="common.info.util.string.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
+      <item itemvalue="Application.ArraysBinarySearch01" />
       <item itemvalue="Application.ClientLogin" />
-      <item itemvalue="Application.DialogTest01" />
       <item itemvalue="Application.IconListRenderer" />
+      <item itemvalue="Application.LocalDateDemo" />
+      <item itemvalue="Application.MainApp" />
       <item itemvalue="Application.Server" />
-      <item itemvalue="Application.Split" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Server" />
-        <item itemvalue="Application.DialogTest01" />
-        <item itemvalue="Application.Split" />
+        <item itemvalue="Application.MainApp" />
         <item itemvalue="Application.IconListRenderer" />
+        <item itemvalue="Application.Server" />
+        <item itemvalue="Application.LocalDateDemo" />
+        <item itemvalue="Application.ArraysBinarySearch01" />
       </list>
     </recent_temporary>
   </component>
   <component name="StructureViewFactory">
-    <option name="AUTOSCROLL_MODE" value="false" />
     <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
     <option name="ACTIVE_ACTIONS" value=",SHOW_ANONYMOUS,SHOW_LAMBDA" />
   </component>
@@ -586,7 +701,7 @@
     </task>
     <servers />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -597,27 +712,28 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="816" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
-      <window_info id="Favorites" order="3" sideWeight="0.50117093" side_tool="true" weight="0.2365416" />
+      <window_info id="Favorites" order="3" sideWeight="0.50117093" side_tool="true" weight="0.23615634" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.42578125" visible="true" weight="0.20358306" />
-      <window_info id="Structure" order="6" sideWeight="0.57421875" side_tool="true" visible="true" weight="0.20358306" />
-      <window_info anchor="bottom" id="Inspection Results" weight="0.32930514" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.2859304" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="2" weight="0.32930514" />
-      <window_info anchor="bottom" id="Version Control" order="3" weight="0.32980332" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" weight="0.32980332" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.2265861" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.33282906" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" weight="0.32980332" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.5740181" visible="true" weight="0.28175896" />
+      <window_info id="Structure" order="6" sideWeight="0.42598188" side_tool="true" weight="0.26058632" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.2854985" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.49837133" side_tool="true" weight="0.34138972" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.32646593" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32930514" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.6286645" weight="0.33987916" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.56677526" weight="0.37009063" />
+      <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.49918568" weight="0.28096676" />
+      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.32930514" />
+      <window_info anchor="bottom" x="0" y="0" width="274" height="616" id="Documentation" order="11" sideWeight="0.43322477" side_tool="true" weight="0.37009063" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.29758307" />
+      <window_info anchor="bottom" id="Log Viewer" order="13" weight="0.32930514" />
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -631,30 +747,36 @@
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
-      <window_info id="Favorites" order="3" sideWeight="0.50117093" side_tool="true" weight="0.2365416" />
+      <window_info id="Favorites" order="3" sideWeight="0.50117093" side_tool="true" weight="0.23615634" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49882904" visible="true" weight="0.29658213" />
-      <window_info id="Structure" order="6" sideWeight="0.50117093" side_tool="true" visible="true" weight="0.29658213" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.32861635" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="2" />
-      <window_info anchor="bottom" id="Version Control" order="3" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.254717" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.5740181" visible="true" weight="0.26058632" />
+      <window_info id="Structure" order="6" sideWeight="0.42598188" side_tool="true" visible="true" weight="0.26058632" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.2854985" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.49837133" side_tool="true" weight="0.34138972" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.32646593" />
+      <window_info anchor="bottom" id="Message" order="3" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.32930514" />
+      <window_info anchor="bottom" id="Debug" order="5" sideWeight="0.6286645" weight="0.33987916" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="8" sideWeight="0.56677526" weight="0.37009063" />
+      <window_info anchor="bottom" id="TODO" order="9" sideWeight="0.49918568" weight="0.28096676" />
+      <window_info anchor="bottom" id="Inspection Results" order="10" weight="0.32930514" />
+      <window_info anchor="bottom" x="0" y="0" width="274" height="616" id="Documentation" order="11" sideWeight="0.43322477" side_tool="true" weight="0.37009063" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.29758307" />
+      <window_info anchor="bottom" id="Log Viewer" order="13" weight="0.32930514" />
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32952693" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="6" weight="0.24959217" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
     </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -696,206 +818,683 @@
       </map>
     </option>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/MainApp.java</url>
+          <line>58</line>
+          <properties class="org.familly.fx.adressbook.first.MainApp" method="start">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>23</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>29</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>47</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="getFirstName">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>52</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="firstNameProperty">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>57</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="setFirstName">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>62</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="getLastName">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>67</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="lastNameProperty">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>77</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="getStreet">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>82</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="streetProperty">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>87</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="setStreet">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="24" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>92</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="getPostalCode">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>97</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="postalCodeProperty">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="28" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>102</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="setPostalCode">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="30" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>107</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="getCity">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>112</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="cityProperty">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>117</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="setCity">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="36" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>123</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="getBirthday">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>128</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="birthdayProperty">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java</url>
+          <line>133</line>
+          <properties class="org.familly.fx.adressbook.first.model.Person" method="setBirthday">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/MainApp.java</url>
+          <line>41</line>
+          <properties class="org.familly.fx.adressbook.first.MainApp" method="&lt;init&gt;">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/MainApp.java</url>
+          <line>299</line>
+          <properties class="org.familly.fx.adressbook.first.MainApp" method="getObservablePersonList">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/MainApp.java</url>
+          <line>308</line>
+          <properties class="org.familly.fx.adressbook.first.MainApp" method="initRootLayout">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint type="java-method">
+          <url>file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/MainApp.java</url>
+          <line>346</line>
+          <properties class="org.familly.fx.adressbook.first.MainApp" method="showPersonOverview">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ChattingProject/resource/image/blog_icon02.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/resource/image/duck.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/resource/image/elephant.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/src/common/info/UserInfo.java">
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/ArraysCopyOfRange01.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
-          <folding>
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#441#442#0" expanded="true" />
-            <element signature="e#489#490#0" expanded="true" />
-            <element signature="e#529#530#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="388">
+          <caret line="25" column="24" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/resource/image/iconmonstr-cat-2-240.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/src/compont/jlist/pig.png" />
-    <entry file="file://$PROJECT_DIR$/ChattingProject/src/compont/jlist/ImgsNText.java">
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/org.familly.fx.HelloWorld.css" />
+    <entry file="file://$PROJECT_DIR$/javaFX/FirstFX/src/sample/sample.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="54" column="15" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="15" />
+        <state relative-caret-position="120">
+          <caret line="5" column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/src/collection/vector/VectorTest.java">
+    <entry file="file://$PROJECT_DIR$/javaFX/FirstFX/src/sample/SampleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#178#179#0" expanded="true" />
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#249#250#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="15" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/src.zip!/java/io/DataInputStream.java">
+    <entry file="file://$PROJECT_DIR$/javaFX/FirstFX/src/sample/sample.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="591" column="19" lean-forward="true" selection-start-line="591" selection-start-column="19" selection-end-line="591" selection-end-column="19" />
+        <state relative-caret-position="336">
+          <caret line="10" column="94" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="94" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/src.zip!/java/lang/System.java">
+    <entry file="file://$PROJECT_DIR$/javaFX/FirstFX/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        <state relative-caret-position="302">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/src.zip!/java/io/PrintStream.java">
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/helloworld/HelloWorld.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="803" column="16" selection-start-line="803" selection-start-column="16" selection-end-line="803" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/src.zip!/javax/swing/ImageIcon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="216" selection-start-line="216" selection-end-line="216" />
-          <folding>
-            <element signature="e#6758#6759#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/pig.png" />
-    <entry file="file://$PROJECT_DIR$/ChattingProject/bin/compont/jlist/IconListRenderer.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/src.zip!/javax/swing/JOptionPane.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="662" column="23" selection-start-line="662" selection-start-column="23" selection-end-line="662" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/src/compont/jlist/IconListRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/src/common/swing/ui/DialogTest.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/src/common/swing/ui/Dialog01.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/src/common/swing/ui/DialogTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java_project/src/winbuilder/FirstWindowBuilderProgram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="47" column="35" selection-start-line="47" selection-start-column="35" selection-end-line="47" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/src/common/info/util/string/Split.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/java_project/src/winbuilder/DialogTest01.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="57" column="42" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="42" />
-          <folding>
-            <element signature="e#1167#1168#0" expanded="true" />
-            <element signature="e#1179#1180#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/src.zip!/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="698" column="29" selection-start-line="698" selection-start-column="29" selection-end-line="698" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ChattingProject/src/chatting/ui/Server.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="188" column="30" selection-start-line="188" selection-start-column="30" selection-end-line="188" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#16749#16750#0" expanded="true" />
-            <element signature="e#16828#16829#0" expanded="true" />
-            <element signature="e#16885#16886#0" expanded="true" />
-            <element signature="e#16964#16965#0" expanded="true" />
-            <element signature="e#16714#16715#0" expanded="true" />
-            <element signature="e#16740#16741#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChattingProject/src/chatting/ui/Client.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="746" column="16" lean-forward="true" selection-start-line="746" selection-start-column="16" selection-end-line="746" selection-end-column="16" />
+        <state relative-caret-position="317">
+          <caret line="751" column="77" selection-start-line="751" selection-start-column="77" selection-end-line="751" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/SystemArrayCopy01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/ArraysBinarySearch01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="9" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/collection/arrays/ArraysAsList01.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/com/sun/javafx/application/LauncherImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="867" selection-start-line="867" selection-end-line="867" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/com/sun/javafx/application/PlatformImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="293" selection-start-line="293" selection-end-line="293" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/com/sun/glass/ui/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="881" selection-start-line="881" selection-end-line="881" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/com/sun/glass/ui/InvokeLaterDispatcher.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="92" column="30" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/com/sun/glass/ui/Window.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="1249" column="39" lean-forward="true" selection-start-line="1249" selection-start-column="39" selection-end-line="1249" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/javafx/application/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="224" selection-start-line="224" selection-end-line="224" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/javafx/fxml/FXMLLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="2408" selection-start-line="2408" selection-end-line="2408" />
+          <folding>
+            <element signature="e#78827#78828#0" expanded="true" />
+            <element signature="e#78858#78859#0" expanded="true" />
+            <element signature="e#81787#81788#0" expanded="true" />
+            <element signature="e#81827#81828#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/javafx/scene/control/TableColumn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="562" selection-start-line="562" selection-end-line="562" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/javafx/scene/control/TableCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="470" selection-start-line="470" selection-end-line="470" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/javafx/scene/control/IndexedCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="116" selection-start-line="116" selection-end-line="116" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/javafx/scene/control/TableRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/javafx/scene/control/Control.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="886" selection-start-line="886" selection-end-line="886" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/javafx/scene/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="9154" selection-start-line="9154" selection-end-line="9154" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/javafx/scene/Parent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="1092" selection-start-line="1092" selection-end-line="1092" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/javafx-src.zip!/javafx/scene/Scene.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="2427" column="35" selection-start-line="2427" selection-start-column="24" selection-end-line="2427" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/helloworld/HelloWorldController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_202/src.zip!/java/time/format/DateTimeFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49200">
+          <caret line="1717" column="18" selection-start-line="1717" selection-start-column="18" selection-end-line="1717" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/util/LocalDateDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/helloworld/HelloWorldMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChattingProject/src/chatting/ui/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1608">
+          <caret line="76" column="15" selection-start-line="76" selection-start-column="15" selection-end-line="76" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#16725#16726#0" expanded="true" />
+            <element signature="e#16749#16750#0" expanded="true" />
+            <element signature="e#16795#16796#0" expanded="true" />
+            <element signature="e#16828#16829#0" expanded="true" />
+            <element signature="e#16861#16862#0" expanded="true" />
+            <element signature="e#16885#16886#0" expanded="true" />
+            <element signature="e#16931#16932#0" expanded="true" />
+            <element signature="e#16964#16965#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ChattingProject/src/chatting/ui/ClientLogin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="127" column="36" selection-start-line="127" selection-start-column="36" selection-end-line="127" selection-end-column="36" />
+        <state relative-caret-position="192">
+          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
           <folding>
-            <element signature="e#2768#2769#0" expanded="true" />
             <element signature="e#2816#2817#0" expanded="true" />
+            <element signature="e#2864#2865#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/resources/images/address_book_32.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ChattingProject/src/compont/jlist/IconListRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1128">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/css/DarkTheme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/helloworld/HelloWorld.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="36" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://D:/CodeMakery/modena.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="888">
+          <caret line="37" column="9" selection-start-line="37" selection-start-column="9" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/PersonEditDialog.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="104" selection-start-line="12" selection-start-column="86" selection-end-line="12" selection-end-column="104" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/PersonEditDialogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1488">
+          <caret line="69" column="44" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/PersonOverviewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2976">
+          <caret line="135" column="36" selection-start-line="135" selection-start-column="36" selection-end-line="135" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1227#1228#0" expanded="true" />
+            <element signature="e#1258#1259#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/BirthdayStatistics.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/BirthdayStatisticsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/PersonListWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/PersonOverview.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="13" column="227" selection-start-line="13" selection-start-column="227" selection-end-line="13" selection-end-column="227" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/view/RootLayout.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1536">
+          <caret line="51" column="27" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/controller/RootLayoutController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1008">
+          <caret line="40" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/util/LocalDateAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/model/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="936">
+          <caret line="38" column="32" selection-start-line="38" selection-start-column="32" selection-end-line="38" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/util/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="65" selection-start-line="65" selection-end-line="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/java_project/src/org/familly/fx/adressbook/first/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="102" column="27" selection-start-line="102" selection-start-column="27" selection-end-line="102" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AddressBookApp/src/org/familly/fx/adressbook/first/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20682068" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20682068" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8 (2)</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20682068" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>java_project</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20682068" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
       <state key="ProjectJDKs.UI">
         <settings>
           <last-edited>1.8</last-edited>
@@ -903,6 +1502,17 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.20682068" />
               </list>
             </option>
           </splitter-proportions>

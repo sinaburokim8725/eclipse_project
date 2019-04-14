@@ -2,36 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="10d4d745-7849-4e75-8f42-ee3c4b79c759" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/13/205ba4a7c73a00191bc0fb01a436f084" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/30/c0aa4a37193c0019129bf78da756c83d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/42/b065ea971d3c0019129bf78da756c83d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/79/c005dd88c73a00191bc0fb01a436f084" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/83/109e8694193c0019129bf78da756c83d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/85/d03c07b7173c0019129bf78da756c83d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/85/f061543a113c0019129bf78da756c83d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/87/c0f2990d1a3c0019129bf78da756c83d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/99/80acdeb8c53a00191bc0fb01a436f084" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/ad/6090a4c1183c0019129bf78da756c83d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/b2/e016bc33473c001913218f1204962d00" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.history/f/10fa557b163c0019129bf78da756c83d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/e4/46/94/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.indexes/e4/46/94/history.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.markers" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/ChattingProject/.markers" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/.markers" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.projects/java_project/.markers" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/1125098209.index" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.core/1125098209.index" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench.texteditor/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench.texteditor/dialog_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../.metadata/version.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/chatting/ui/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/chatting/ui/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/chatting/ui/Server$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/chatting/ui/Server$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/chatting/ui/Server$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/chatting/ui/Server$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/chatting/ui/Server.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/chatting/ui/Server.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chatting/ui/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chatting/ui/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/generic/Box.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lambda/Compare.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lambda/CompareExam01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lambda/Lambda01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lambda/Lambda02.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lambda/Lambda03.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lambda/Lambda04.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/network/stream/ObjectInOutStream01.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../javaFX/FirstFX/src/sample/sample.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../java_project/src/util/TimezoneTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/collection/vector/VectorTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/collection/vector/VectorTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/common/info/UserInfo.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chatting/ui/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chatting/ui/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/collection/vector/VectorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/collection/vector/VectorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/info/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/info/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_project/bin/java_project/main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../java_project/bin/java_project/main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../java_project/src/java_project/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../java_project/src/java_project/main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,12 +28,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/chatting/ui/Server.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
+            <state relative-caret-position="24">
               <caret line="167" column="24" selection-start-line="167" selection-start-column="24" selection-end-line="167" selection-end-column="24" />
             </state>
           </provider>
@@ -55,7 +47,16 @@
         <entry file="file://$PROJECT_DIR$/src/chatting/ui/ClientLogin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/network/stream/ObjectInOutStream01.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -81,7 +82,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-11" />
     <option name="width" value="933" />
     <option name="height" value="791" />
@@ -92,33 +93,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ChattingProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChattingProject" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChattingProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChattingProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ChattingProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ChattingProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551764411485" />
   </component>
   <component name="RunDashboard">
@@ -185,10 +166,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="0" width="933" height="791" extended-state="0" />
+    <frame x="-8" y="-8" width="1296" height="816" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49842766" visible="true" weight="0.3105446" />
-      <window_info id="Structure" order="1" sideWeight="0.5015723" side_tool="true" visible="true" weight="0.3105446" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.57854986" visible="true" weight="0.2247557" />
+      <window_info id="Structure" order="1" sideWeight="0.42145014" side_tool="true" visible="true" weight="0.2247557" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -216,6 +197,13 @@
     </layout>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/chatting/ui/Server.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="167" column="24" selection-start-line="167" selection-start-column="24" selection-end-line="167" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/chatting/ui/Client.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -226,14 +214,14 @@
     <entry file="file://$PROJECT_DIR$/src/chatting/ui/ClientLogin.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/chatting/ui/Server.java">
+    <entry file="file://$PROJECT_DIR$/src/network/stream/ObjectInOutStream01.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="167" column="24" selection-start-line="167" selection-start-column="24" selection-end-line="167" selection-end-column="24" />
+        <state relative-caret-position="120">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
